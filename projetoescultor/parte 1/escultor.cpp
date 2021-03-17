@@ -1,19 +1,36 @@
 #include "escultor.h"
+
 #include <iostream>
 #include <fstream>
 #include <cmath>
 
+using namespace std;
+
+
 Escultor::Escultor(int _nx, int _ny, int _nz){
-    nx = _nx; ny = _ny; nz = _nz; // valores de entrada pro construtor
-    v = new Voxel**[nx];
-    for(int i=0;i<nx;i++){          // construção da matriz
-        v[i] = new Voxel*[ny];
-        for(int j=0;j<ny;j++){
-            v[i][j] = new Voxel[nz];
+    nx = _nx;
+    ny = _ny; // construtor
+    nz = _nz;
+
+    v = new Voxel**[nz];
+    v[0] = new Voxel*[nz*nx];
+
+    for(int k=1;k<nz; k++){
+        v[k] = v[k-1] + nx;
+    }
+
+    v[0][0] = new Voxel[nx*ny*nz];
+
+    int n = 0;
+
+    for(int k=0;k<nz;k++){
+        for(int i=0;i<nx;i++){
+            v[k][i] = v[0][0] + n*ny;
+            n++;
         }
     }
 
-};
+}
 
 void Escultor::setColor(float verm, float verde, float azul, float alpha){
     // utilizado para definir a cor do desenho
@@ -34,10 +51,176 @@ void Escultor::cutVoxel(int x, int y, int z){
 };
 
 
+void Escultor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
+    for(int k=z0;k<=z1;k++){
+        for(int j=y0;j<=y1;j++){
+            for(int i=x0;i<=x1;i++){
+                putVoxel(i,j,k);
+
+            }
+        }
+    }
+}
+
+void Escultor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
+    for (int k=z0;k<=z1;k++){
+        for(int i=x0;i<=x1;i++){
+            for(int j=y0;j<=y1;j++){
+                cutVoxel(i,j,k);
+            }
+        }
+
+    }
+}
+
+
+void Escultor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
+    float esfera;
+
+    for(int k=0;k<=nz;k++){
+        for(int j=0; j<=ny; j++){
+            for(int i=0; i<=nx; i++){
+                esfera = pow(i - xcenter, 2) + pow(j - ycenter, 2) + pow(k - zcenter, 2);
+                if(esfera <= pow(radius, 2)){
+                    putVoxel(i,j,k);
+                }
+            }
+        }
+    }
+}
+
+void Escultor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
+    float esfera;
+
+    for(int k=0;k<=nz;k++){
+        for(int j=0;j<=ny;j++){
+            for(int i=0;i<=nx;i++){
+                esfera = pow(i - xcenter, 2) + pow(j - ycenter, 2) + pow(k - zcenter, 2);
+                if(esfera <= pow(radius, 2)){
+                    cutVoxel(i,j,k);
+                }
+            }
+        }
+    }
+}
+
+
+void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
+    float elipse;
+
+    if(rx ==0){
+        for(int k=0;k<=nz;k++){
+            for(int j=0;j<=ny;j++){
+                elipse = pow(j - ycenter, 2)/pow(ry,2) + pow(k - zcenter, 2)/pow(rz,2);
+
+                if(elipse <= 1){
+                    putVoxel(xcenter,j,k);
+
+                }
+
+            }
+
+        }
+    }
+    else if(ry==0){
+        for(int k=0; k<=nz; k++){
+            for(int i=0;i<=nx;i++){
+                elipse = pow(i - xcenter,2)/pow(rx,2) + pow(k - zcenter, 2)/pow(rz,2);
+                if(elipse <= 1){
+                    putVoxel(i,ycenter,k);
+
+                }
+            }
+        }
+    }
+    else if(rz==0){
+        for(int i=0;i<=nx;i++){
+            for(int j=0;j<=ny;j++){
+                elipse = pow(i - xcenter, 2)/pow(rx,2) + pow(j-ycenter, 2)/pow(ry,2);
+
+                if(elipse <= 1){
+                    putVoxel(i,j,zcenter);
+
+                }
+            }
+        }
+    }
+    else{
+        for(int k=0;k<=nz;k++){
+            for(int j=0;j<=ny;j++){
+                for(int i=0;i<=nx;i++){
+
+                    elipse = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry, 2) + pow(k-zcenter,2)/pow(rz,2);
+                    if(elipse <=1){
+                        putVoxel(i,j,k);
+                    }
+                }
+            }
+        }
+    }
+}
+
+void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
+    float elipse;
+
+    if(rx ==0){
+        for(int k=0;k<=nz;k++){
+            for(int j=0;j<=ny;j++){
+                elipse = pow(j - ycenter, 2)/pow(ry,2) + pow(k - zcenter, 2)/pow(rz,2);
+
+                if(elipse <= 1){
+                    cutVoxel(xcenter,j,k);
+
+                }
+
+            }
+
+        }
+    }
+    else if(ry==0){
+        for(int k=0; k<=nz; k++){
+            for(int i=0;i<=nx;i++){
+                elipse = pow(i - xcenter,2)/pow(rx,2) + pow(k - zcenter, 2)/pow(rz,2);
+                if(elipse <= 1){
+                    cutVoxel(i,ycenter,k);
+
+                }
+            }
+        }
+    }
+    else if(rz==0){
+        for(int i=0;i<=nx;i++){
+            for(int j=0;j<=ny;j++){
+                elipse = pow(i - xcenter, 2)/pow(rx,2) + pow(j-ycenter, 2)/pow(ry,2);
+
+                if(elipse <= 1){
+                    cutVoxel(i,j,zcenter);
+
+                }
+            }
+        }
+    }
+    else{
+        for(int k=0;k<=nz;k++){
+            for(int j=0;j<=ny;j++){
+                for(int i=0;i<=nx;i++){
+
+                    elipse = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry, 2) + pow(k-zcenter,2)/pow(rz,2);
+                    if(elipse <=1){
+                        cutVoxel(i,j,k);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 Escultor::~Escultor(){
     delete v[0][0];
     delete v[0];
     delete v;
+
 }
 
 void Escultor::writeOFF(char *filename){
@@ -114,3 +297,4 @@ void Escultor::writeOFF(char *filename){
        std::cout<<"Arquivo salvo";
    }
 }
+
