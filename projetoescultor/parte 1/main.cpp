@@ -33,7 +33,7 @@ int main(void){
     v3->cutBox(18,20,21,21,15,16);
 
     v3->setColor(255,255,255,1);
-    v3->putSphere(12,2,9,0.5); 
+    v3->putSphere(29,1,9,1); 
    
     v3->setColor(0,0,0,0);
     v3->cutBox(16,16,1,1,15,15); // buraco
