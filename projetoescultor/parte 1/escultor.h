@@ -2,6 +2,14 @@
 #define ESCULTOR_H
 
 struct Voxel{
+    /**
+    * A estrutura Voxel é responsável por gerar a matriz 3D de acordo com seus parâmetros
+    * @param r: refere-se à cor vermelha existente no sistema RGB, sua variação de tom é feita entre 0 e 255.
+    * @param g: refere-se à cor verde existente no sistema RGB, sua variação de tom é feita entre 0 e 255.
+    * @param b: refere-se à cor azul existente no sistema RGB, sua variação de tom é feita entre 0 e 255.
+    * @param a: refere-se à transparência (opacidade) de uma figura, a variação de transparência é feita entre 0 e 1.
+    * @param isOn: habilita ou desabilita o Voxel, é um parâmetro booleano, sendo utilizado apenas como True ou False.
+    */
     float r, g, b;  // cores
     float a;        // transparência
     bool isOn;      // inclusão
@@ -14,7 +22,7 @@ protected:
     Voxel ***v; // Matriz 3d
 
     int nx,ny,nz; // Dimensões da matriz 3d
-    float r,g,b,a; // Current drawing color
+    float r,g,b,a; // Correspondente às cores do sistema RGB e transparência da figura.
 
 public:
     Escultor(int _nx, int _ny, int _nz);
