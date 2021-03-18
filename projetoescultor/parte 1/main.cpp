@@ -26,6 +26,6 @@ int main()
 
     v3->writeOFF("arquivoteste.off");
 
-  return 0;
+  return 0; 
 
 }
