@@ -61,7 +61,7 @@ void Escultor::putVoxel(int x, int y, int z){
 };
 
 void Escultor::cutVoxel(int x, int y, int z){
-    v[x][y][z].isOn = true; // desativa o Voxel
+    v[x][y][z].isOn = false; // desativa o Voxel, realizando o corte em uma determinada localização.
 };
 
 
