@@ -68,5 +68,4 @@ int main(void){
     v3->writeOFF((char*)"arquivoteste.off");
 
 
-
 }
