@@ -28,6 +28,9 @@ int main()
     v3->cutBox(20,20,20,21,15,16); // cortes superiores
     v3->cutBox(19,20,20,21,15,16);
     v3->cutBox(18,20,21,21,15,16);
+   
+    v3->setColor(250,250,250,0);
+    v3->putSphere(12,2,9,0.5); //bolinha de golfe
 
     v3->writeOFF("arquivoteste.off");
 
