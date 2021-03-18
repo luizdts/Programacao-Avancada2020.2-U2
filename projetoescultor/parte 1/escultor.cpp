@@ -3,25 +3,25 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <vector>
 #include <cmath>
 
 using namespace std;
-
 
 Escultor::Escultor(int _nx, int _ny, int _nz){
     nx = _nx;
     ny = _ny; // construtor
     nz = _nz;
 
+
     v = new Voxel**[nz];
+
     v[0] = new Voxel*[nz*nx];
 
     for(int k=1;k<nz; k++){
         v[k] = v[k-1] + nx;
     }
 
-    v[0][0] = new Voxel[nx*ny*nz];
+    v[0][0] = new Voxel[nz*nx*ny];
 
     int n = 0;
 
@@ -34,9 +34,19 @@ Escultor::Escultor(int _nx, int _ny, int _nz){
 
 }
 
+Escultor::~Escultor(){
+    delete [] v[0][0];
+    delete [] v[0];
+    delete [] v;
+
+}
+
 void Escultor::setColor(float verm, float verde, float azul, float alpha){
     // utilizado para definir a cor do desenho
-    r = verm; g = verde; b = azul; a = alpha;
+    r = verm;
+    g = verde;
+    b = azul;
+    a = alpha;
 };
 
 // ativa o Voxel na posição (x,y,z), atribuindo assim isOn = true
@@ -46,10 +56,12 @@ void Escultor::putVoxel(int x, int y, int z){
     v[x][y][z].b = b;
     v[x][y][z].a = a;
     v[x][y][z].isOn = true; // ativação do isOn, fazendo o voxel aparecer
+
+
 };
 
 void Escultor::cutVoxel(int x, int y, int z){
-    v[x][y][z].isOn = false; // desativa o Voxel
+    v[x][y][z].isOn = true; // desativa o Voxel
 };
 
 
@@ -77,7 +89,7 @@ void Escultor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
 
 
 void Escultor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
-    double d;
+    float d;
 
     for(int k=0;k<=nz;k++){
         for(int j=0; j<=ny; j++){
@@ -92,7 +104,7 @@ void Escultor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
 }
 
 void Escultor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
-    double d;
+    float d;
 
     for(int k=0;k<=nz;k++){
         for(int j=0;j<=ny;j++){
@@ -108,7 +120,7 @@ void Escultor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
 
 
 void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
-    double d;
+    float d;
 
     if(rx ==0){
         for(int k=0;k<=nz;k++){
@@ -163,7 +175,7 @@ void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 }
 
 void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
-    double d;
+    float d;
 
     if(rx ==0){
         for(int k=0;k<=nz;k++){
@@ -218,13 +230,6 @@ void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 }
 
 
-Escultor::~Escultor(){
-    delete v[0][0];
-    delete v[0];
-    delete v;
-
-}
-
 void Escultor::writeOFF(char* filename){
     ofstream fout;
 
@@ -238,9 +243,10 @@ void Escultor::writeOFF(char* filename){
 
     if(fout.is_open()){
         cout << "Gravando arquivo OFF" << endl;
-    } else {
-        cout << "Erro de abertura de arquivo OFF";
-        exit(true);
+    }
+    else {
+        cout << "Erro no arquivo OFF";
+        exit(1);
     }
     fout << "OFF" << endl;
 
@@ -248,8 +254,8 @@ void Escultor::writeOFF(char* filename){
         for(int j=0;j<ny;j++){
             for(int k=0;k<nz;k++){
                 if(v[i][j][k].isOn){
-                    vertices = 8;
-                    faces = 6;
+                    vertices = vertices+8;
+                    faces = faces+6;
 
                 }
             }
@@ -257,12 +263,13 @@ void Escultor::writeOFF(char* filename){
 
     }
 
-   fout << vertices << faces << " "<< 0 << endl;
+   fout << vertices <<" "<< faces << " "<< 0 << endl;
 
    for(int i=0;i<nx;i++){
        for(int j=0;j<ny;j++){
            for(int k=0;k<nz;k++){
                if(v[i][j][k].isOn){
+
                    fout<<i-0.5<<" "<<j+0.5<<" "<<k-0.5<<endl;
                    fout<<i-0.5<<" "<<j-0.5<<" "<<k-0.5<<endl;
                    fout<<i+0.5<<" "<<j-0.5<<" "<<k-0.5<<endl;
@@ -279,6 +286,7 @@ void Escultor::writeOFF(char* filename){
    for(int i=0;i<nx;i++){
        for(int j=0;j<ny;j++){
            for(int k=0;k<nz;k++){
+               if(v[i][j][k].isOn){
             fout<<4<<" "<<aux+0<<" "<<aux+3<<" "<<aux+2<<" "<<aux+1<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;
             fout<<4<<" "<<aux+4<<" "<<aux+5<<" "<<aux+6<<" "<<aux+7<<" "<<v[i][j][k].r<<" " <<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;
             fout<<4<<" "<<aux+0<<" "<<aux+1<<" "<<aux+5<<" "<<aux+4<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;
@@ -289,10 +297,9 @@ void Escultor::writeOFF(char* filename){
            }
        }
    }
-
-
-   if(fout.is_open()){
-        cout<<"Arquivo salvo";
-   }
 }
 
+   if(fout.is_open()){
+        cout<<"Arquivo OFF salvo, verifique o caminho de saida" << endl;
+   }
+}
