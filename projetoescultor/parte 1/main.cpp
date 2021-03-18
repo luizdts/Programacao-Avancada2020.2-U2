@@ -12,7 +12,7 @@ int main(void){
     v3 = new Escultor(a,b,c);
     
     v3->setColor(0,255,0,1);
-    v3->putBox(0,50,0,1,0,30); // piso
+    v3->putBox(0,80,0,1,0,30); // piso
       
     v3->setColor(255,255,255,1);
 
