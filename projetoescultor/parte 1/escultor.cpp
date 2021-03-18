@@ -1,7 +1,9 @@
 #include "escultor.h"
-
 #include <iostream>
 #include <fstream>
+#include <sstream>
+#include <string>
+#include <vector>
 #include <cmath>
 
 using namespace std;
@@ -75,13 +77,13 @@ void Escultor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
 
 
 void Escultor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
-    float esfera;
+    double d;
 
     for(int k=0;k<=nz;k++){
         for(int j=0; j<=ny; j++){
             for(int i=0; i<=nx; i++){
-                esfera = pow(i - xcenter, 2) + pow(j - ycenter, 2) + pow(k - zcenter, 2);
-                if(esfera <= pow(radius, 2)){
+                d = pow(i - xcenter, 2) + pow(j - ycenter, 2) + pow(k - zcenter, 2);
+                if(d <= pow(radius, 2)){
                     putVoxel(i,j,k);
                 }
             }
@@ -90,13 +92,13 @@ void Escultor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
 }
 
 void Escultor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
-    float esfera;
+    double d;
 
     for(int k=0;k<=nz;k++){
         for(int j=0;j<=ny;j++){
             for(int i=0;i<=nx;i++){
-                esfera = pow(i - xcenter, 2) + pow(j - ycenter, 2) + pow(k - zcenter, 2);
-                if(esfera <= pow(radius, 2)){
+                d = pow(i - xcenter, 2) + pow(j - ycenter, 2) + pow(k - zcenter, 2);
+                if(d <= pow(radius, 2)){
                     cutVoxel(i,j,k);
                 }
             }
@@ -106,14 +108,14 @@ void Escultor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
 
 
 void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
-    float elipse;
+    double d;
 
     if(rx ==0){
         for(int k=0;k<=nz;k++){
             for(int j=0;j<=ny;j++){
-                elipse = pow(j - ycenter, 2)/pow(ry,2) + pow(k - zcenter, 2)/pow(rz,2);
+                d = pow(j - ycenter, 2)/pow(ry,2) + pow(k - zcenter, 2)/pow(rz,2);
 
-                if(elipse <= 1){
+                if(d <= 1){
                     putVoxel(xcenter,j,k);
 
                 }
@@ -125,8 +127,8 @@ void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     else if(ry==0){
         for(int k=0; k<=nz; k++){
             for(int i=0;i<=nx;i++){
-                elipse = pow(i - xcenter,2)/pow(rx,2) + pow(k - zcenter, 2)/pow(rz,2);
-                if(elipse <= 1){
+                d = pow(i - xcenter,2)/pow(rx,2) + pow(k - zcenter, 2)/pow(rz,2);
+                if(d <= 1){
                     putVoxel(i,ycenter,k);
 
                 }
@@ -136,9 +138,9 @@ void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     else if(rz==0){
         for(int i=0;i<=nx;i++){
             for(int j=0;j<=ny;j++){
-                elipse = pow(i - xcenter, 2)/pow(rx,2) + pow(j-ycenter, 2)/pow(ry,2);
+                d = pow(i - xcenter, 2)/pow(rx,2) + pow(j-ycenter, 2)/pow(ry,2);
 
-                if(elipse <= 1){
+                if(d <= 1){
                     putVoxel(i,j,zcenter);
 
                 }
@@ -150,8 +152,8 @@ void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
             for(int j=0;j<=ny;j++){
                 for(int i=0;i<=nx;i++){
 
-                    elipse = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry, 2) + pow(k-zcenter,2)/pow(rz,2);
-                    if(elipse <=1){
+                    d = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry, 2) + pow(k-zcenter,2)/pow(rz,2);
+                    if(d <=1){
                         putVoxel(i,j,k);
                     }
                 }
@@ -161,14 +163,14 @@ void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 }
 
 void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
-    float elipse;
+    double d;
 
     if(rx ==0){
         for(int k=0;k<=nz;k++){
             for(int j=0;j<=ny;j++){
-                elipse = pow(j - ycenter, 2)/pow(ry,2) + pow(k - zcenter, 2)/pow(rz,2);
+                d = pow(j - ycenter, 2)/pow(ry,2) + pow(k - zcenter, 2)/pow(rz,2);
 
-                if(elipse <= 1){
+                if(d <= 1){
                     cutVoxel(xcenter,j,k);
 
                 }
@@ -180,8 +182,8 @@ void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     else if(ry==0){
         for(int k=0; k<=nz; k++){
             for(int i=0;i<=nx;i++){
-                elipse = pow(i - xcenter,2)/pow(rx,2) + pow(k - zcenter, 2)/pow(rz,2);
-                if(elipse <= 1){
+                d = pow(i - xcenter,2)/pow(rx,2) + pow(k - zcenter, 2)/pow(rz,2);
+                if(d <= 1){
                     cutVoxel(i,ycenter,k);
 
                 }
@@ -191,9 +193,9 @@ void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     else if(rz==0){
         for(int i=0;i<=nx;i++){
             for(int j=0;j<=ny;j++){
-                elipse = pow(i - xcenter, 2)/pow(rx,2) + pow(j-ycenter, 2)/pow(ry,2);
+                d = pow(i - xcenter, 2)/pow(rx,2) + pow(j-ycenter, 2)/pow(ry,2);
 
-                if(elipse <= 1){
+                if(d <= 1){
                     cutVoxel(i,j,zcenter);
 
                 }
@@ -205,8 +207,8 @@ void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
             for(int j=0;j<=ny;j++){
                 for(int i=0;i<=nx;i++){
 
-                    elipse = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry, 2) + pow(k-zcenter,2)/pow(rz,2);
-                    if(elipse <=1){
+                    d = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry, 2) + pow(k-zcenter,2)/pow(rz,2);
+                    if(d <=1){
                         cutVoxel(i,j,k);
                     }
                 }
@@ -223,20 +225,21 @@ Escultor::~Escultor(){
 
 }
 
-void Escultor::writeOFF(char *filename){
+void Escultor::writeOFF(char* filename){
     ofstream fout;
 
     fixed(fout);
 
     int vertices = 0;
     int faces = 0;
+    int aux = 0;
 
     fout.open(filename);
 
     if(fout.is_open()){
-        std::cout << "Gravando arquivo OFF";
+        cout << "Gravando arquivo OFF" << endl;
     } else {
-        std::cout << "Erro de abertura de arquivo OFF";
+        cout << "Erro de abertura de arquivo OFF";
         exit(true);
     }
     fout << "OFF" << endl;
@@ -276,25 +279,20 @@ void Escultor::writeOFF(char *filename){
    for(int i=0;i<nx;i++){
        for(int j=0;j<ny;j++){
            for(int k=0;k<nz;k++){
-               fout << 4 << " " << 0 + 8*i << " " << 3 + 8*i << " " << 2 + 8*i << " " << 1 + 8*i << " " << v[i][j][k].r
-                    << " " << v[i][j][k].g << " " << v[i][j][k].b << " " << v[i][j][k].a << " " << endl;
-               fout << 4 << " " << 4 + 8*i << " " << 5 + 8*i << " " << 6 + 8*i << " " << 7 + 8*i << " " << v[i][j][k].r
-                    << " " << v[i][j][k].g << " " << v[i][j][k].b << " " << v[i][j][k].a << " " << endl;
-               fout << 4 << " " << 0 + 8*i << " " << 1 + 8*i << " " << 5 + 8*i << " " << 4 + 8*i << " " << v[i][j][k].r
-                    << " " << v[i][j][k].g << " " << v[i][j][k].b << " " << v[i][j][k].a << " " << endl;
-               fout << 4 << " " << 0 + 8*i << " " << 4 + 8*i << " " << 7 + 8*i << " " << 3 + 8*i << " " << v[i][j][k].r
-                    << " " << v[i][j][k].g << " " << v[i][j][k].b << " " << v[i][j][k].a << " " << endl;
-               fout << 4 << " " << 3 + 8*i << " " << 7 + 8*i << " " << 6 + 8*i << " " << 2 + 8*i << " " << v[i][j][k].r
-                    << " " << v[i][j][k].g << " " << v[i][j][k].b << " " << v[i][j][k].a << " " << endl;
-               fout << 4 << " " << 1 + 8*i << " " << 2 + 8*i << " " << 6 + 8*i << " " << 5 + 8*i << " " << v[i][j][k].r
-                    << " " << v[i][j][k].g << " " << v[i][j][k].b << " " << v[i][j][k].a << " " << endl;
+            fout<<4<<" "<<aux+0<<" "<<aux+3<<" "<<aux+2<<" "<<aux+1<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;
+            fout<<4<<" "<<aux+4<<" "<<aux+5<<" "<<aux+6<<" "<<aux+7<<" "<<v[i][j][k].r<<" " <<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;
+            fout<<4<<" "<<aux+0<<" "<<aux+1<<" "<<aux+5<<" "<<aux+4<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;
+            fout<<4<<" "<<aux+0<<" "<<aux+4<<" "<<aux+7<<" "<<aux+3<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;
+            fout<<4<<" "<<aux+3<<" "<<aux+7<<" "<<aux+6<<" "<<aux+2<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;
+            fout<<4<<" "<<aux+1<<" "<<aux+2<<" "<<aux+6<<" "<<aux+5<<" "<<v[i][j][k].r<<" "<<v[i][j][k].g<<" "<<v[i][j][k].b<<" "<<v[i][j][k].a<<endl;
+            aux=aux+8;
            }
        }
    }
 
 
    if(fout.is_open()){
-       std::cout<<"Arquivo salvo";
+        cout<<"Arquivo salvo";
    }
 }
 
