@@ -242,11 +242,11 @@ void Escultor::writeOFF(char* filename){
     fout.open(filename);
 
     if(fout.is_open()){
-        cout << "Gravando arquivo OFF" << endl;
+        cout << "Gravando arquivo OFF..." << endl;
     }
     else {
-        cout << "Erro no arquivo OFF";
-        exit(1);
+        cout << "Erro na gravação do arquivo OFF!";
+        exit(true);
     }
     fout << "OFF" << endl;
 
