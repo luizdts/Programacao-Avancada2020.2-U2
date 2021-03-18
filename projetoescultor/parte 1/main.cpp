@@ -15,9 +15,9 @@ int main()
     v3 = new Escultor(a,b,c);
     
     v3->setColor(0,255,0,1);
-    v3->putBox(0,30,0,1,0,30);
-    v3->putBox(15,15,0,15,15,15);
-    v3->putBox(15,20,15,21,15,15);
+    v3->putBox(0,30,0,1,0,30); // piso
+    v3->putBox(15,15,0,15,15,15); // cabo da bandeira
+    v3->putBox(15,20,15,21,15,15); // bandeira
 
     v3->cutBox(18,20,15,15,15,16);
     v3->cutBox(19,20,16,16,15,16); // cortes inferiores
