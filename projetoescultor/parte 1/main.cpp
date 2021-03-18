@@ -1,4 +1,3 @@
-
 #include "escultor.cpp"
 #include <iostream>
 #include <fstream>
@@ -37,7 +36,8 @@ int main(void){
    
     v3->setColor(0,0,0,0);
     v3->cutBox(16,16,1,1,15,15); // buraco
-
+    
+    v3->setColor(139,69,19,0);
     v3->putBox(46,48,0,9,25,25);
     v3->putBox(46,48,0,9,29,29); // bolsa de golfe
     v3->putBox(45,45,0,9,25,29);
@@ -48,6 +48,7 @@ int main(void){
     v3->cutBox(45,45,2,9,25,25); // molde da bolsa de golfe
     v3->cutBox(45,45,2,9,29,29);
 
+    v3 ->setColor(192,192,192, 0);
     v3->putBox(46,46,0,12,26,26); // tacos da bolsa
     v3->putBox(48,48,0,12,27,27);
 
