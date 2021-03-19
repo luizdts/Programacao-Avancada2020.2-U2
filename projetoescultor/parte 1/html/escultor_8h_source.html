@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto Escultor Parte 1: Código-Fonte de escultor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto Escultor Parte 1
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">escultor.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="escultor_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ESCULTOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ESCULTOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_voxel.html">   15</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_voxel.html">Voxel</a>{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="struct_voxel.html#a5cd8432b1d7d0fd8b79e0fc7d10373a8">   17</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_voxel.html#a06872ec79b836120b551a848968c0f1b">r</a>, <a class="code" href="struct_voxel.html#a27c0da1ed2ff430401d23ff171612a73">g</a>, <a class="code" href="struct_voxel.html#a5cd8432b1d7d0fd8b79e0fc7d10373a8">b</a>;  <span class="comment">// cores</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_voxel.html#a3ce2579eb0a9f09a07112ce7498a638e">   18</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="struct_voxel.html#a3ce2579eb0a9f09a07112ce7498a638e">a</a>;        <span class="comment">// transparência</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_voxel.html#a6fbe8bd53f64685ac4210726d40fc775">   19</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="struct_voxel.html#a6fbe8bd53f64685ac4210726d40fc775">isOn</a>;      <span class="comment">// inclusão</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_escultor.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_escultor.html">Escultor</a>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_escultor.html#afc2ec122bbaf206b2d5bf8b9f2f32c7a">   35</a></span>&#160;    <a class="code" href="struct_voxel.html">Voxel</a> ***<a class="code" href="class_escultor.html#afc2ec122bbaf206b2d5bf8b9f2f32c7a">v</a>; <span class="comment">// Matriz 3d</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_escultor.html#a7739ca9a5de47becad04c505edc5a782">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_escultor.html#a7739ca9a5de47becad04c505edc5a782">nx</a>,<a class="code" href="class_escultor.html#af40660ee1f0abbe651e9a2a74376b7c5">ny</a>,<a class="code" href="class_escultor.html#ad3f3edf599ee06fdaa36c021f0e9be6d">nz</a>; <span class="comment">// Dimensões da matriz 3d</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_escultor.html#ac38328e0f27ddf7be575a7508567424d">   38</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_escultor.html#a7efc6bee81fc6e12aac18f39252ca33a">r</a>,<a class="code" href="class_escultor.html#af0f8431add4402f8d086b1a9b148d6f9">g</a>,<a class="code" href="class_escultor.html#a07216dcea8ce9f0942fca3768ed39f6e">b</a>,<a class="code" href="class_escultor.html#ac38328e0f27ddf7be575a7508567424d">a</a>; <span class="comment">// Cores do sistema RGB e a transparência</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_escultor.html#a4a25888b573a9efc54dd65e85d5dcd5d">Escultor</a>(<span class="keywordtype">int</span> _nx, <span class="keywordtype">int</span> _ny, <span class="keywordtype">int</span> _nz);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_escultor.html#ae3112e055c4cdd5494e12bb35555d402">~Escultor</a>(); <span class="comment">// Destrututor da classe Escultor</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#a0ed0cf0ce64c797f9d41dbc0f0d2a9df">setColor</a>(<span class="keywordtype">float</span> <a class="code" href="class_escultor.html#a7efc6bee81fc6e12aac18f39252ca33a">r</a>, <span class="keywordtype">float</span> <a class="code" href="class_escultor.html#af0f8431add4402f8d086b1a9b148d6f9">g</a>, <span class="keywordtype">float</span> <a class="code" href="class_escultor.html#a07216dcea8ce9f0942fca3768ed39f6e">b</a>, <span class="keywordtype">float</span> alpha);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#a87de20221e4def641970fcfedacf95d1">putVoxel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> z);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#abe91e0fef05bb42f534953b704bd53a2">cutVoxel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> z);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#ae49f6229976821a4f0477d0a174c586f">putBox</a>(<span class="keywordtype">int</span> x0, <span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y0, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> z0, <span class="keywordtype">int</span> z1);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#a42c41f431cb0df860a0b1189732a6334">cutBox</a>(<span class="keywordtype">int</span> x0, <span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y0, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> z0, <span class="keywordtype">int</span> z1);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#a7f1fc36e24b3618bc7afd92ffee4ea52">putSphere</a>(<span class="keywordtype">int</span> xcenter, <span class="keywordtype">int</span> ycenter, <span class="keywordtype">int</span> zcenter, <span class="keywordtype">int</span> radius);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#a85b8c4cdfe8bf701346718a794e7ecd5">cutSphere</a>(<span class="keywordtype">int</span> xcenter, <span class="keywordtype">int</span> ycenter, <span class="keywordtype">int</span> zcenter, <span class="keywordtype">int</span> radius);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#a4265bf31b2377d632f09c3088297f04c">putEllipsoid</a>(<span class="keywordtype">int</span> xcenter, <span class="keywordtype">int</span> ycenter, <span class="keywordtype">int</span> zcenter, <span class="keywordtype">int</span> rx, <span class="keywordtype">int</span> ry, <span class="keywordtype">int</span> rz);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#a64482fa63d2ad48dd3c85f0ae8646162">cutEllipsoid</a>(<span class="keywordtype">int</span> xcenter, <span class="keywordtype">int</span> ycenter, <span class="keywordtype">int</span> zcenter, <span class="keywordtype">int</span> rx, <span class="keywordtype">int</span> ry, <span class="keywordtype">int</span> rz);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_escultor.html#a6c6de3cfa74365ecad4b843ded3972fb">writeOFF</a>(<span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;};</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// ESCULTOR_H</span></div>
+<div class="ttc" id="aclass_escultor_html"><div class="ttname"><a href="class_escultor.html">Escultor</a></div><div class="ttdoc">The Escultor class Classe responsável por gerar o Escultor da figura 3D, dentro dessa classe encontra...</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00029">escultor.h:29</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a07216dcea8ce9f0942fca3768ed39f6e"><div class="ttname"><a href="class_escultor.html#a07216dcea8ce9f0942fca3768ed39f6e">Escultor::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00038">escultor.h:38</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a0ed0cf0ce64c797f9d41dbc0f0d2a9df"><div class="ttname"><a href="class_escultor.html#a0ed0cf0ce64c797f9d41dbc0f0d2a9df">Escultor::setColor</a></div><div class="ttdeci">void setColor(float r, float g, float b, float alpha)</div><div class="ttdoc">setColor: Função responsável por dar cor no padrão RGB às peças criadas</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00045">escultor.cpp:45</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a4265bf31b2377d632f09c3088297f04c"><div class="ttname"><a href="class_escultor.html#a4265bf31b2377d632f09c3088297f04c">Escultor::putEllipsoid</a></div><div class="ttdeci">void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)</div><div class="ttdoc">putEllipsoid: método responsável por gerar a figura de uma elipse no plano do desenho.</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00131">escultor.cpp:131</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a42c41f431cb0df860a0b1189732a6334"><div class="ttname"><a href="class_escultor.html#a42c41f431cb0df860a0b1189732a6334">Escultor::cutBox</a></div><div class="ttdeci">void cutBox(int x0, int x1, int y0, int y1, int z0, int z1)</div><div class="ttdoc">cutBox: Desativa o Voxel em um determinado intervalo, seja ele em x, y, ou z, destruindo os blocos no...</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00084">escultor.cpp:84</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a4a25888b573a9efc54dd65e85d5dcd5d"><div class="ttname"><a href="class_escultor.html#a4a25888b573a9efc54dd65e85d5dcd5d">Escultor::Escultor</a></div><div class="ttdeci">Escultor(int _nx, int _ny, int _nz)</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00010">escultor.cpp:10</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a64482fa63d2ad48dd3c85f0ae8646162"><div class="ttname"><a href="class_escultor.html#a64482fa63d2ad48dd3c85f0ae8646162">Escultor::cutEllipsoid</a></div><div class="ttdeci">void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)</div><div class="ttdoc">cutEllipsoid: método responsável por cortar a área de uma figura de um elipse no plano do desenho.</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00186">escultor.cpp:186</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a6c6de3cfa74365ecad4b843ded3972fb"><div class="ttname"><a href="class_escultor.html#a6c6de3cfa74365ecad4b843ded3972fb">Escultor::writeOFF</a></div><div class="ttdeci">void writeOFF(char *filename)</div><div class="ttdoc">writeOFF: método responsável pela gravação do arquivo OFF no final de sua execução.</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00242">escultor.cpp:242</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a7739ca9a5de47becad04c505edc5a782"><div class="ttname"><a href="class_escultor.html#a7739ca9a5de47becad04c505edc5a782">Escultor::nx</a></div><div class="ttdeci">int nx</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00037">escultor.h:37</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a7efc6bee81fc6e12aac18f39252ca33a"><div class="ttname"><a href="class_escultor.html#a7efc6bee81fc6e12aac18f39252ca33a">Escultor::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00038">escultor.h:38</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a7f1fc36e24b3618bc7afd92ffee4ea52"><div class="ttname"><a href="class_escultor.html#a7f1fc36e24b3618bc7afd92ffee4ea52">Escultor::putSphere</a></div><div class="ttdeci">void putSphere(int xcenter, int ycenter, int zcenter, int radius)</div><div class="ttdoc">putSphere: método responsável por gerar a figura de uma esfera no plano de desenho.</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00097">escultor.cpp:97</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a85b8c4cdfe8bf701346718a794e7ecd5"><div class="ttname"><a href="class_escultor.html#a85b8c4cdfe8bf701346718a794e7ecd5">Escultor::cutSphere</a></div><div class="ttdeci">void cutSphere(int xcenter, int ycenter, int zcenter, int radius)</div><div class="ttdoc">cutSphere método responsável por cortar uma determinada área de uma figura de uma esfera no plano do ...</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00114">escultor.cpp:114</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a87de20221e4def641970fcfedacf95d1"><div class="ttname"><a href="class_escultor.html#a87de20221e4def641970fcfedacf95d1">Escultor::putVoxel</a></div><div class="ttdeci">void putVoxel(int x, int y, int z)</div><div class="ttdoc">putVoxel: Habilita o Voxel para operar na coloração dos blocos desenhados.</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00055">escultor.cpp:55</a></div></div>
+<div class="ttc" id="aclass_escultor_html_abe91e0fef05bb42f534953b704bd53a2"><div class="ttname"><a href="class_escultor.html#abe91e0fef05bb42f534953b704bd53a2">Escultor::cutVoxel</a></div><div class="ttdeci">void cutVoxel(int x, int y, int z)</div><div class="ttdoc">cutVoxel: Desabilita o Voxel que estava operando na coloração dos blocos.</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00066">escultor.cpp:66</a></div></div>
+<div class="ttc" id="aclass_escultor_html_ac38328e0f27ddf7be575a7508567424d"><div class="ttname"><a href="class_escultor.html#ac38328e0f27ddf7be575a7508567424d">Escultor::a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00038">escultor.h:38</a></div></div>
+<div class="ttc" id="aclass_escultor_html_ad3f3edf599ee06fdaa36c021f0e9be6d"><div class="ttname"><a href="class_escultor.html#ad3f3edf599ee06fdaa36c021f0e9be6d">Escultor::nz</a></div><div class="ttdeci">int nz</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00037">escultor.h:37</a></div></div>
+<div class="ttc" id="aclass_escultor_html_ae3112e055c4cdd5494e12bb35555d402"><div class="ttname"><a href="class_escultor.html#ae3112e055c4cdd5494e12bb35555d402">Escultor::~Escultor</a></div><div class="ttdeci">~Escultor()</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00038">escultor.cpp:38</a></div></div>
+<div class="ttc" id="aclass_escultor_html_ae49f6229976821a4f0477d0a174c586f"><div class="ttname"><a href="class_escultor.html#ae49f6229976821a4f0477d0a174c586f">Escultor::putBox</a></div><div class="ttdeci">void putBox(int x0, int x1, int y0, int y1, int z0, int z1)</div><div class="ttdoc">putBox: Ativa o Voxel em um determinado intervalo, seja ele em x, y ou z, os blocos criados recebem a...</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00071">escultor.cpp:71</a></div></div>
+<div class="ttc" id="aclass_escultor_html_af0f8431add4402f8d086b1a9b148d6f9"><div class="ttname"><a href="class_escultor.html#af0f8431add4402f8d086b1a9b148d6f9">Escultor::g</a></div><div class="ttdeci">float g</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00038">escultor.h:38</a></div></div>
+<div class="ttc" id="aclass_escultor_html_af40660ee1f0abbe651e9a2a74376b7c5"><div class="ttname"><a href="class_escultor.html#af40660ee1f0abbe651e9a2a74376b7c5">Escultor::ny</a></div><div class="ttdeci">int ny</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00037">escultor.h:37</a></div></div>
+<div class="ttc" id="aclass_escultor_html_afc2ec122bbaf206b2d5bf8b9f2f32c7a"><div class="ttname"><a href="class_escultor.html#afc2ec122bbaf206b2d5bf8b9f2f32c7a">Escultor::v</a></div><div class="ttdeci">Voxel *** v</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00035">escultor.h:35</a></div></div>
+<div class="ttc" id="astruct_voxel_html"><div class="ttname"><a href="struct_voxel.html">Voxel</a></div><div class="ttdoc">The Voxel struct A estrutura Voxel é responsável por gerar a matriz 3D de acordo com seus parâmetros.</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00015">escultor.h:15</a></div></div>
+<div class="ttc" id="astruct_voxel_html_a06872ec79b836120b551a848968c0f1b"><div class="ttname"><a href="struct_voxel.html#a06872ec79b836120b551a848968c0f1b">Voxel::r</a></div><div class="ttdeci">float r</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00017">escultor.h:17</a></div></div>
+<div class="ttc" id="astruct_voxel_html_a27c0da1ed2ff430401d23ff171612a73"><div class="ttname"><a href="struct_voxel.html#a27c0da1ed2ff430401d23ff171612a73">Voxel::g</a></div><div class="ttdeci">float g</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00017">escultor.h:17</a></div></div>
+<div class="ttc" id="astruct_voxel_html_a3ce2579eb0a9f09a07112ce7498a638e"><div class="ttname"><a href="struct_voxel.html#a3ce2579eb0a9f09a07112ce7498a638e">Voxel::a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00018">escultor.h:18</a></div></div>
+<div class="ttc" id="astruct_voxel_html_a5cd8432b1d7d0fd8b79e0fc7d10373a8"><div class="ttname"><a href="struct_voxel.html#a5cd8432b1d7d0fd8b79e0fc7d10373a8">Voxel::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00017">escultor.h:17</a></div></div>
+<div class="ttc" id="astruct_voxel_html_a6fbe8bd53f64685ac4210726d40fc775"><div class="ttname"><a href="struct_voxel.html#a6fbe8bd53f64685ac4210726d40fc775">Voxel::isOn</a></div><div class="ttdeci">bool isOn</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00019">escultor.h:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
