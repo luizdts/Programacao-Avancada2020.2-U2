@@ -6,25 +6,25 @@
 #include <cmath>
 
 using namespace std;
-
 Escultor::Escultor(int _nx, int _ny, int _nz){
     nx = _nx;
-    ny = _ny; // construtor
+    ny = _ny; // construtor da classe Escultor
     nz = _nz;
 
 
-    v = new Voxel**[nz];
+    v = new Voxel**[nz]; // criação do Voxel na forma ponteiro para ponteiro
 
-    v[0] = new Voxel*[nz*nx];
+    v[0] = new Voxel*[nz*nx]; // alocação de linhas para o Voxel
 
     for(int k=1;k<nz; k++){
-        v[k] = v[k-1] + nx;
+        v[k] = v[k-1] + nx; // adição de linhas aos planos
     }
 
-    v[0][0] = new Voxel[nz*nx*ny];
+    v[0][0] = new Voxel[nz*nx*ny]; // alocação dos Voxel na matriz 3D
+
 
     int n = 0;
-
+    // adição de colunas entre as linhas e planos da matriz 3D
     for(int k=0;k<nz;k++){
         for(int i=0;i<nx;i++){
             v[k][i] = v[0][0] + n*ny;
@@ -35,41 +35,45 @@ Escultor::Escultor(int _nx, int _ny, int _nz){
 }
 
 Escultor::~Escultor(){
-    delete [] v[0][0];
-    delete [] v[0];
-    delete [] v;
+    delete [] v[0][0]; // liberação a partir do comando delete para o Voxel
+    delete [] v[0]; // liberação das linhas
+    delete [] v; // liberação da figura desenhada
 
 }
 
 void Escultor::setColor(float verm, float verde, float azul, float alpha){
     // utilizado para definir a cor do desenho
-    r = verm;
-    g = verde;
-    b = azul;
-    a = alpha;
+    r = verm; // cor vermelha
+    g = verde; // cor verde
+    b = azul; // cor azul
+    a = alpha; // transparência da peça
 };
 
 // ativa o Voxel na posição (x,y,z), atribuindo assim isOn = true
+
 void Escultor::putVoxel(int x, int y, int z){
-    v[x][y][z].r = r;
+    v[x][y][z].isOn = true; // ativação do isOn, fazendo o voxel aparecer
+    v[x][y][z].r = r; // implementação das cores do sistema RGB e da transparência.
     v[x][y][z].g = g;
     v[x][y][z].b = b;
     v[x][y][z].a = a;
-    v[x][y][z].isOn = true; // ativação do isOn, fazendo o voxel aparecer
+
 
 
 };
 
 void Escultor::cutVoxel(int x, int y, int z){
-    v[x][y][z].isOn = false; // desativa o Voxel, realizando o corte em uma determinada localização.
+    v[x][y][z].isOn = false; // desativa o Voxel
 };
 
 
 void Escultor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
+    // insere um Voxel com as coordenadas correspondentes aos eixos, gerando uma
+    // caixa.
     for(int k=z0;k<=z1;k++){
         for(int j=y0;j<=y1;j++){
             for(int i=x0;i<=x1;i++){
-                putVoxel(i,j,k);
+                putVoxel(i,j,k); // habilita o Voxel, desenhando assim o retângulo nas coordenadas especificadas.
 
             }
         }
@@ -77,10 +81,11 @@ void Escultor::putBox(int x0, int x1, int y0, int y1, int z0, int z1){
 }
 
 void Escultor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
+    // desabilita os Voxels em um determinado espaço atribuido pelas coordenadas do plano x, y, z.
     for (int k=z0;k<=z1;k++){
-        for(int i=x0;i<=x1;i++){
+        for(int i=x0;i<=x1;i++){ // análise de planos, linhas e colunas da matriz.
             for(int j=y0;j<=y1;j++){
-                cutVoxel(i,j,k);
+                cutVoxel(i,j,k); // desabilita o Voxel de acordo com as coordenadas passadas.
             }
         }
 
@@ -89,14 +94,16 @@ void Escultor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1){
 
 
 void Escultor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
+    // método responsável por gerar a representação de uma esfera no plano x, y, z.
+    // esse método insere a esfera de acordo com as coordenadas da esfera (x,y,z) e o raio da esfera (radius).
     float d;
 
     for(int k=0;k<=nz;k++){
-        for(int j=0; j<=ny; j++){
+        for(int j=0; j<=ny; j++){ // análise de planos, linhas e colunas da matriz.
             for(int i=0; i<=nx; i++){
                 d = pow(i - xcenter, 2) + pow(j - ycenter, 2) + pow(k - zcenter, 2);
                 if(d <= pow(radius, 2)){
-                    putVoxel(i,j,k);
+                    putVoxel(i,j,k); // insere a esfera de acordo com as coordenadas formadas na saída.
                 }
             }
         }
@@ -104,31 +111,32 @@ void Escultor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
 }
 
 void Escultor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
+    // método responsável por desabilitar a representação da esfera no plano x, y, z de acordo com as coordenadas definidas.
+    // esse método apaga a esfera de acordo com as coordenadas da esfera (x,y,z) e o raio da esfera (radius).
     float d;
 
     for(int k=0;k<=nz;k++){
-        for(int j=0;j<=ny;j++){
+        for(int j=0;j<=ny;j++){  // análise de planos, linhas e colunas da matriz.
             for(int i=0;i<=nx;i++){
                 d = pow(i - xcenter, 2) + pow(j - ycenter, 2) + pow(k - zcenter, 2);
                 if(d <= pow(radius, 2)){
-                    cutVoxel(i,j,k);
+                    cutVoxel(i,j,k); // desabilita o Voxel em uma determinada área do plano x, y, z.
                 }
             }
         }
     }
 }
 
-
 void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
     float d;
 
     if(rx ==0){
-        for(int k=0;k<=nz;k++){
+        for(int k=0;k<=nz;k++){  // análise de planos, linhas e colunas da matriz.
             for(int j=0;j<=ny;j++){
                 d = pow(j - ycenter, 2)/pow(ry,2) + pow(k - zcenter, 2)/pow(rz,2);
 
                 if(d <= 1){
-                    putVoxel(xcenter,j,k);
+                    putVoxel(xcenter,j,k); // Habilita o Voxel em uma determinada área do plano x, y, z.
 
                 }
 
@@ -137,23 +145,23 @@ void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
         }
     }
     else if(ry==0){
-        for(int k=0; k<=nz; k++){
+        for(int k=0; k<=nz; k++){  // análise de planos, linhas e colunas da matriz.
             for(int i=0;i<=nx;i++){
                 d = pow(i - xcenter,2)/pow(rx,2) + pow(k - zcenter, 2)/pow(rz,2);
                 if(d <= 1){
-                    putVoxel(i,ycenter,k);
+                    putVoxel(i,ycenter,k); // Habilita o Voxel em uma determinada área do plano x, y, z.
 
                 }
             }
         }
     }
     else if(rz==0){
-        for(int i=0;i<=nx;i++){
+        for(int i=0;i<=nx;i++){  // análise de planos, linhas e colunas da matriz.
             for(int j=0;j<=ny;j++){
                 d = pow(i - xcenter, 2)/pow(rx,2) + pow(j-ycenter, 2)/pow(ry,2);
 
                 if(d <= 1){
-                    putVoxel(i,j,zcenter);
+                    putVoxel(i,j,zcenter); // Habilita o Voxel em uma determinada área do plano x, y, z.
 
                 }
             }
@@ -161,12 +169,12 @@ void Escultor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     }
     else{
         for(int k=0;k<=nz;k++){
-            for(int j=0;j<=ny;j++){
+            for(int j=0;j<=ny;j++){  // análise de planos, linhas e colunas da matriz.
                 for(int i=0;i<=nx;i++){
 
                     d = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry, 2) + pow(k-zcenter,2)/pow(rz,2);
                     if(d <=1){
-                        putVoxel(i,j,k);
+                        putVoxel(i,j,k); // Habilita o Voxel em uma determinada área do plano x, y, z.
                     }
                 }
             }
@@ -178,12 +186,12 @@ void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     float d;
 
     if(rx ==0){
-        for(int k=0;k<=nz;k++){
+        for(int k=0;k<=nz;k++){  // análise de planos, linhas e colunas da matriz.
             for(int j=0;j<=ny;j++){
                 d = pow(j - ycenter, 2)/pow(ry,2) + pow(k - zcenter, 2)/pow(rz,2);
 
                 if(d <= 1){
-                    cutVoxel(xcenter,j,k);
+                    cutVoxel(xcenter,j,k); // desabilita o Voxel em uma determinada área do plano x, y, z.
 
                 }
 
@@ -196,7 +204,7 @@ void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
             for(int i=0;i<=nx;i++){
                 d = pow(i - xcenter,2)/pow(rx,2) + pow(k - zcenter, 2)/pow(rz,2);
                 if(d <= 1){
-                    cutVoxel(i,ycenter,k);
+                    cutVoxel(i,ycenter,k); // desabilita o Voxel em uma determinada área do plano x, y, z.
 
                 }
             }
@@ -208,7 +216,7 @@ void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
                 d = pow(i - xcenter, 2)/pow(rx,2) + pow(j-ycenter, 2)/pow(ry,2);
 
                 if(d <= 1){
-                    cutVoxel(i,j,zcenter);
+                    cutVoxel(i,j,zcenter); // desabilita o Voxel em uma determinada área do plano x, y, z.
 
                 }
             }
@@ -221,7 +229,7 @@ void Escultor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 
                     d = pow(i-xcenter,2)/pow(rx,2) + pow(j-ycenter,2)/pow(ry, 2) + pow(k-zcenter,2)/pow(rz,2);
                     if(d <=1){
-                        cutVoxel(i,j,k);
+                        cutVoxel(i,j,k); // desabilita o Voxel em uma determinada área do plano x, y, z.
                     }
                 }
             }
@@ -239,14 +247,14 @@ void Escultor::writeOFF(char* filename){
     int faces = 0;
     int aux = 0;
 
-    fout.open(filename);
+    fout.open(filename); // abertura do arquivo .OFF para escrita
 
     if(fout.is_open()){
         cout << "Gravando arquivo OFF..." << endl;
     }
     else {
-        cout << "Erro na gravação do arquivo OFF!";
-        exit(true);
+        cout << "Erro no arquivo OFF";
+        exit(1);
     }
     fout << "OFF" << endl;
 
@@ -300,6 +308,6 @@ void Escultor::writeOFF(char* filename){
 }
 
    if(fout.is_open()){
-        cout<<"Arquivo OFF salvo, verifique o caminho de saida" << endl;
+        cout<<"Arquivo OFF salvo, verifique o caminho de saida" << endl;  // finalização da gravação do arquivo .OFF
    }
 }
