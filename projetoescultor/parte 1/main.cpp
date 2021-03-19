@@ -52,8 +52,8 @@ int main(void){
     v3->putBox(46,46,0,12,26,26); // tacos da bolsa
     v3->putBox(48,48,0,12,27,27);
 
-    v3->putSphere(45,12,26,1); //bolinha de teste
-    v3->putSphere(49,12,27,1); //bolinha de teste
+    v3->putSphere(45,12,26,1); 
+    v3->putSphere(49,12,27,1); 
     v3->putBox(44,44,11,11,26,26);  // preenchimentos do taco
     v3->putBox(49,50,11,11,27,27);
 
