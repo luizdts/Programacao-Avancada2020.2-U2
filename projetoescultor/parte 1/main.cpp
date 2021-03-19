@@ -1,4 +1,4 @@
-#include "escultor.cpp"
+#include "escultor.h"
 #include <iostream>
 #include <fstream>
 #include <string>
