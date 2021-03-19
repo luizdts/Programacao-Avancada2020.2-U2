@@ -66,7 +66,7 @@ int main(void){
     v3->cutBox(45,45,13,13,26,26);  // molde dos tacos
 
 
-    v3->writeOFF((char*)"arquivoteste.off");
+    v3->writeOFF((char*)"campodegolfe.off");
 
 
 }
