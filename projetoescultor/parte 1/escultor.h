@@ -56,37 +56,37 @@ public:
      */
     void setColor(float r, float g, float b, float alpha);
     /**
-     * @brief putVoxel
-     * @param x
-     * @param y
-     * @param z
+     * @brief putVoxel: Habilita o Voxel para operar na coloração dos blocos desenhados.
+     * @param x: coordenada em relação ao eixo x.
+     * @param y: coordenada em relação ao eixo y.
+     * @param z: coordenada em relação ao eixo z.
      */
     void putVoxel(int x, int y, int z);
     /**
-     * @brief cutVoxel
-     * @param x
-     * @param y
-     * @param z
+     * @brief cutVoxel: Desabilita o Voxel que estava operando na coloração dos blocos.
+     * @param x: coordenada em relação ao eixo x.
+     * @param y: coordenada em relação ao eixo y.
+     * @param z: coordenada em relação ao eixo z.
      */
     void cutVoxel(int x, int y, int z);
     /**
-     * @brief putBox
-     * @param x0
-     * @param x1
-     * @param y0
-     * @param y1
-     * @param z0
-     * @param z1
+     * @brief putBox: Ativa o Voxel em um determinado intervalo, seja ele em x, y ou z, os blocos criados recebem a cor estabelecida.
+     * @param x0: parâmetro referente ao início da construção do retângulo em relação ao eixo x.
+     * @param x1: parâmetro referente ao final da construção do retângulo em relação ao eixo x.
+     * @param y0: parâmetro referente ao início da construção do retângulo em relação ao eixo y.
+     * @param y1: parâmetro referente ao final da construção do retângulo em relação ao eixo y.
+     * @param z0: parâmetro referente ao início da construção do retângulo em relação ao eixo z.
+     * @param z1: parâmetro referente ao final da construção do retângulo em relação ao eixo z.
      */
     void putBox(int x0, int x1, int y0, int y1, int z0, int z1);
     /**
-     * @brief cutBox
-     * @param x0
-     * @param x1
-     * @param y0
-     * @param y1
-     * @param z0
-     * @param z1
+     * @brief cutBox: Desativa o Voxel em um determinado intervalo, seja ele em x, y, ou z, destruindo os blocos no intervalo determinado.
+     * @param x0: parâmetro referente ao início da construção do retângulo em relação ao eixo x.
+     * @param x1: parâmetro referente ao final da construção do retângulo em relação ao eixo x.
+     * @param y0: parâmetro referente ao início da construção do retângulo em relação ao eixo y.
+     * @param y1: parâmetro referente ao final da construção do retângulo em relação ao eixo y.
+     * @param z0: parâmetro referente ao início da construção do retângulo em relação ao eixo z.
+     * @param z1: parâmetro referente ao final da construção do retângulo em relação ao eixo z.
      */
     void cutBox(int x0, int x1, int y0, int y1, int z0, int z1);
     /**
@@ -99,35 +99,35 @@ public:
     void putSphere(int xcenter, int ycenter, int zcenter, int radius);
     /**
      * @brief cutSphere método responsável por cortar uma determinada área de uma figura de uma esfera no plano do desenho.
-     * @param xcenter
-     * @param ycenter
-     * @param zcenter
-     * @param radius
+     * @param xcenter: parâmetro referente à coordenada do x do centro.
+     * @param ycenter: parâmetro referente à coordenada do y do centro.
+     * @param zcenter: parâmetro referente à coordenada do z do centro.
+     * @param radius: parâmetro referente ao tamanho do raio da esfera.
      */
     void cutSphere(int xcenter, int ycenter, int zcenter, int radius);
     /**
      * @brief putEllipsoid: método responsável por gerar a figura de uma elipse no plano do desenho.
-     * @param xcenter
-     * @param ycenter
-     * @param zcenter
-     * @param rx: parâmetro referente à coordenada do eixo x
-     * @param ry: parâmetro referente à coordenada do eixo y
-     * @param rz: parâmetro referente à coordenada do eixo z
+     * @param xcenter: parâmetro referente à coordenada do x do centro.
+     * @param ycenter: parâmetro referente à coordenada do y do centro.
+     * @param zcenter: parâmetro referente à coordenada do z do centro.
+     * @param rx: parâmetro referente à coordenada do eixo x.
+     * @param ry: parâmetro referente à coordenada do eixo y.
+     * @param rz: parâmetro referente à coordenada do eixo z.
      */
     void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
     /**
      * @brief cutEllipsoid: método responsável por cortar a área de uma figura de um elipse no plano do desenho.
-     * @param xcenter: parâmetro referente à coordenada do x do centro
-     * @param ycenter: parâmetro referente à coordenada do y do centro
-     * @param zcenter: parâmetro referente à coordenada do z do centro
-     * @param rx: parâmetro referente à coordenada do eixo x
-     * @param ry: parâmetro referente à coordenada do eixo y
-     * @param rz: parâmetro referente à coordenada do eixo z
+     * @param xcenter: parâmetro referente à coordenada do x do centro.
+     * @param ycenter: parâmetro referente à coordenada do y do centro.
+     * @param zcenter: parâmetro referente à coordenada do z do centro.
+     * @param rx: parâmetro referente à coordenada do eixo x.
+     * @param ry: parâmetro referente à coordenada do eixo y.
+     * @param rz: parâmetro referente à coordenada do eixo z.
      */
     void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
     /**
      * @brief writeOFF: método responsável pela gravação do arquivo OFF no final de sua execução.
-     * @param filename: armazena o nome do arquivo .OFF
+     * @param filename: armazena o nome do arquivo .OFF.
      */
     void writeOFF(char* filename);
 
