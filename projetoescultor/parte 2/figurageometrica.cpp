@@ -1,10 +1,6 @@
-#include <iostream>
-#include "figurageometrica.h"
+#include "figurageometrica.hpp"
+//classe abstrata 
+FiguraGeometrica::FiguraGeometrica()
+{
 
-FiguraGeometrica::FiguraGeometrica(){
-
-};
-
-FiguraGeometrica::~FiguraGeometrica(){
-
-};
+}
