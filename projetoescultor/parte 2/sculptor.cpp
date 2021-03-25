@@ -7,7 +7,7 @@
 using namespace std;
 
 //construtor
-Sculptor::Sculptor(int _nx, int _ny, int _nz){
+Escultor::Escultor(int _nx, int _ny, int _nz){
    nx = _nx;
    ny = _ny;
    nz = _nz;
