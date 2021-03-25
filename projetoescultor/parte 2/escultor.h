@@ -1,12 +1,12 @@
-#ifndef SCULPTOR_H
-#define SCULPTOR_H
+#ifndef ESCULTOR_H
+#define ESCULTOR_H
 
 struct Voxel {
   float r,g,b; 
   float a;    
   bool isOn; 
 };
-class Sculptor {
+class Escultor {
 protected:
      
   Voxel ***v;      //matriz alocada dinamicamente 
@@ -17,8 +17,8 @@ protected:
 
 public:
     
-  Sculptor(int _nx, int _ny, int _nz); //construtor da classe scultor
-  ~Sculptor();  //destrutor da classe scultor
+  Escultor(int _nx, int _ny, int _nz); //construtor da classe scultor
+  ~Escultor();  //destrutor da classe scultor
     
   void setColor(float r, float g, float b, float alpha); // método para trabalhar a cor 
      
@@ -30,5 +30,5 @@ public:
   
 };
 
-#endif // SCULPTOR_H
+#endif // ESCULTOR_H
 
