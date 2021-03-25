@@ -1,4 +1,4 @@
-#include "sculptor.hpp"
+#include "escultor.h"
 #include <iostream>
 #include <cmath>
 #include <fstream>
@@ -24,14 +24,14 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz){
 
 }
 //destrutor
-Sculptor::~Sculptor()
+Escultor::~Escultor()
 {
    delete[] v[0][0];
    delete[] v[0];
    delete[] v;
 }
 //metodo para setar cor
-void Sculptor::setColor(float r, float g, float b, float alpha)
+void Escultor::setColor(float r, float g, float b, float alpha)
 {
          this -> r=r;
 
@@ -42,7 +42,7 @@ void Sculptor::setColor(float r, float g, float b, float alpha)
          a=alpha;
 }
 //ativando voxel
-void Sculptor::putVoxel(int x, int y, int z)
+void Escultor::putVoxel(int x, int y, int z)
 {
      v[x][y][z].isOn = true;
      v[x][y][z].r = r;
@@ -52,11 +52,11 @@ void Sculptor::putVoxel(int x, int y, int z)
 
 }
 // desativando voxel
-void Sculptor::cutVoxel(int x, int y, int z){
+void Escultor::cutVoxel(int x, int y, int z){
      v[x][y][z].isOn = false;
 }
 
-void Sculptor :: writeOFF(char* filename){
+void Escultor::writeOFF(char* filename){
     ofstream fout;
 
     fixed(fout);
