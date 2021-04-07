@@ -22,9 +22,9 @@ std::vector<FiguraGeometrica*> Interpretador::parse(std::string filename){
     std::vector<FiguraGeometrica*> figura;
 
     fin.open(filename.c_str());
-    if(!fin.is_open()){
+    if(fin.is_open()){
         std::cout << "Erro de abertura!" << std::endl;
-        exit(true);
+        exit(0);
     }
     while(fin.good()){
         std::getline(fin, s);
