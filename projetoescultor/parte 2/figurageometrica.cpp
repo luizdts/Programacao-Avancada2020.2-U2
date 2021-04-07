@@ -1,4 +1,4 @@
-#include "figurageometrica.hpp"
+#include "figurageometrica.h"
 //classe abstrata 
 FiguraGeometrica::FiguraGeometrica()
 {

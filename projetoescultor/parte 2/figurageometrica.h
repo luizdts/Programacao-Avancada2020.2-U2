@@ -1,6 +1,6 @@
 #ifndef FIGURAGEOMETRICA_H
 #define FIGURAGEOMETRICA_H
-#include "escultor.hpp"
+#include "escultor.h"
 
 class FiguraGeometrica{
 protected:
@@ -11,7 +11,7 @@ public:
 
    virtual ~FiguraGeometrica(){}; ///destrutor da classe
     //classe abstrata 
-  virtual void draw(Sculptor  &e)=0; // metedo para desenhar formas geometricas na escultura
+  virtual void draw(Escultor  &e)=0; // metedo para desenhar formas geometricas na escultura
    
 };
 

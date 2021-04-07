@@ -1,9 +1,18 @@
 #include <iostream>
+#include <vector>
+#include <fstream>
+#include "escultor.h"
+#include "interpretador.h"
+#include "figurageometrica.h"
+
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
-    return 0;
+    Escultor *s;
+    Interpretador parser;
+
+    vector<FiguraGeometrica*>figura;
+
 }

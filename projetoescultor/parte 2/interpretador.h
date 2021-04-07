@@ -7,7 +7,7 @@
 
 class Interpretador
 {
-    int x, y, z;
+    int dx, dy, dz; // dimensão
     float r, g, b, a;
 
 public:
