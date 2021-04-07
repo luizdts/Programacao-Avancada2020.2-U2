@@ -1,15 +1,15 @@
 #include "interpretador.h"
-#include <sstream>
-#include <fstream>
-#include <iostream>
-#include <putbox.h>
-#include <putvoxel.h>
-#include <putsphere.h>
-#include <putellipsoid.h>
-#include <cutvoxel.h>
-#include <cutbox.h>
-#include <cutsphere.h>
-#include <cutellipsoid.h>
+#include "sstream"
+#include "fstream"
+#include "iostream"
+#include "putbox.h"
+#include "putvoxel.h"
+#include "putsphere.h"
+#include "putellipsoid.h"
+#include "cutvoxel.h"
+#include "cutbox.h"
+#include "cutsphere.h"
+#include "cutellipsoid.h"
 
 Interpretador::Interpretador()
 {
