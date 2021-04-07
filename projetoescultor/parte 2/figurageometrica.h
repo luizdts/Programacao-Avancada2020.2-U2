@@ -9,9 +9,11 @@ protected:
 public:
 
 
-   virtual ~FiguraGeometrica(){}; ///destrutor da classe
+    virtual ~FiguraGeometrica(){}; ///destrutor da classe
     //classe abstrata 
-  virtual void draw(Escultor  &e)=0; // metedo para desenhar formas geometricas na escultura
+    virtual void draw(Escultor  &e)=0; // metedo para desenhar formas geometricas na escultura
+    FiguraGeometrica();
+
    
 };
 
