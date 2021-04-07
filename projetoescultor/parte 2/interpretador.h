@@ -12,7 +12,7 @@ class Interpretador
 
 public:
     Interpretador();
-    std::vector<FiguraGeometrica*> parte (std::string filename);
+    std::vector<FiguraGeometrica*> parse(std::string filename);
 
     int getX();
 
