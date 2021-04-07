@@ -14,6 +14,8 @@ int main()
     Interpretador parser;
 
     vector<FiguraGeometrica*>figura;
+    
+    figura = parser.parse("fig.txt");
 
     s = new Escultor(parser.getX(), parser.getY(), parser.getZ());
 
