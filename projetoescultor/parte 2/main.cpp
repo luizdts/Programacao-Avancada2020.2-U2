@@ -15,4 +15,17 @@ int main()
 
     vector<FiguraGeometrica*>figura;
 
+    s = new Escultor(parser.getX(), parser.getY(), parser.getZ());
+
+     for(size_t i=0;i<figura.size();i++){
+       cout << "desenhando\n";
+       figura[i]->draw(*s);
+   }
+    s->writeOFF((char*) "teste.off");
+    for(size_t i=0;i<figura.size();i++){
+       delete figura[i];
+    }
+    delete s;
+    return 0;
+
 }
