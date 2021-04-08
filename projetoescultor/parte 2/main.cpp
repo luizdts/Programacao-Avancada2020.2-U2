@@ -15,7 +15,7 @@ int main()
 
     vector<FiguraGeometrica*>figura;
     
-    figura = parser.parse("fig.txt");
+    figura = parser.parse("figura.txt");
 
     s = new Escultor(parser.getX(), parser.getY(), parser.getZ());
 
