@@ -1,0 +1,110 @@
+\hypertarget{classput_voxel}{}\doxysection{Referência à classe put\+Voxel}
+\label{classput_voxel}\index{putVoxel@{putVoxel}}
+
+
+A classe Put\+Voxel é responsável ativar o \mbox{\hyperlink{struct_voxel}{Voxel}}, ela realiza o preenchimento do espaço com base nos parâmetros de entrada fornecidos pelo usuário.  
+
+
+
+
+{\ttfamily \#include $<$putvoxel.\+h$>$}
+
+Diagrama de heranças da classe put\+Voxel\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classput_voxel}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classput_voxel_a598024389450f9df8dd1dc1c221c9d03}{put\+Voxel}} (int x, int y, int z, float \mbox{\hyperlink{class_figura_geometrica_a0a4f57efb1a6c525c8aeee34c92e7eab}{r}}, float \mbox{\hyperlink{class_figura_geometrica_a51930549bcb90d016b824f10f95df355}{g}}, float \mbox{\hyperlink{class_figura_geometrica_a25e5d6c21410103c25ec55c0117dac0d}{b}}, float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165}{a}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classput_voxel}{put\+Voxel}}\+: Habilita o \mbox{\hyperlink{struct_voxel}{Voxel}} para operar na coloração dos blocos desenhados. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classput_voxel_a4e2f82887ec1c1d88bf7905a0ea19f68}{$\sim$put\+Voxel}} ()
+\item 
+void \mbox{\hyperlink{classput_voxel_a91f4fd9579b34f01bcadfc9c1702d455}{draw}} (\mbox{\hyperlink{class_escultor}{Escultor}} \&e)
+\begin{DoxyCompactList}\small\item\em draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+A classe Put\+Voxel é responsável ativar o \mbox{\hyperlink{struct_voxel}{Voxel}}, ela realiza o preenchimento do espaço com base nos parâmetros de entrada fornecidos pelo usuário. 
+
+Definido na linha 10 do ficheiro putvoxel.\+h.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classput_voxel_a598024389450f9df8dd1dc1c221c9d03}\label{classput_voxel_a598024389450f9df8dd1dc1c221c9d03}} 
+\index{putVoxel@{putVoxel}!putVoxel@{putVoxel}}
+\index{putVoxel@{putVoxel}!putVoxel@{putVoxel}}
+\doxysubsubsection{\texorpdfstring{putVoxel()}{putVoxel()}}
+{\footnotesize\ttfamily put\+Voxel\+::put\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classput_voxel}{put\+Voxel}}\+: Habilita o \mbox{\hyperlink{struct_voxel}{Voxel}} para operar na coloração dos blocos desenhados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x} & coordenada em relação ao eixo x. \\
+\hline
+{\em y} & coordenada em relação ao eixo y. \\
+\hline
+{\em z} & coordenada em relação ao eixo z. \\
+\hline
+{\em r} & Cor vermelha. \\
+\hline
+{\em g} & Cor verde. \\
+\hline
+{\em b} & Cor azul. \\
+\hline
+{\em a} & Transparência. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 3 do ficheiro putvoxel.\+cpp.
+
+\mbox{\Hypertarget{classput_voxel_a4e2f82887ec1c1d88bf7905a0ea19f68}\label{classput_voxel_a4e2f82887ec1c1d88bf7905a0ea19f68}} 
+\index{putVoxel@{putVoxel}!````~putVoxel@{$\sim$putVoxel}}
+\index{````~putVoxel@{$\sim$putVoxel}!putVoxel@{putVoxel}}
+\doxysubsubsection{\texorpdfstring{$\sim$putVoxel()}{~putVoxel()}}
+{\footnotesize\ttfamily put\+Voxel\+::$\sim$put\+Voxel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definido na linha 29 do ficheiro putvoxel.\+h.
+
+
+
+\doxysubsection{Documentação dos métodos}
+\mbox{\Hypertarget{classput_voxel_a91f4fd9579b34f01bcadfc9c1702d455}\label{classput_voxel_a91f4fd9579b34f01bcadfc9c1702d455}} 
+\index{putVoxel@{putVoxel}!draw@{draw}}
+\index{draw@{draw}!putVoxel@{putVoxel}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void put\+Voxel\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_escultor}{Escultor}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em e} & parâmetro responsável por referenciar o valor recebido pela função draw. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_a3c87d823ac6c404cb71b9a4454cc9be4}{Figura\+Geometrica}}.
+
+
+
+Definido na linha 8 do ficheiro putvoxel.\+cpp.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{putvoxel_8h}{putvoxel.\+h}}\item 
+\mbox{\hyperlink{putvoxel_8cpp}{putvoxel.\+cpp}}\end{DoxyCompactItemize}

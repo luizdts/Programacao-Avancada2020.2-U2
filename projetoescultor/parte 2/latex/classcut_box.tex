@@ -1,0 +1,108 @@
+\hypertarget{classcut_box}{}\doxysection{Referência à classe cut\+Box}
+\label{classcut_box}\index{cutBox@{cutBox}}
+
+
+A classe Cut\+Box é responsável por desativar o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo em x, y ou z.  
+
+
+
+
+{\ttfamily \#include $<$cutbox.\+h$>$}
+
+Diagrama de heranças da classe cut\+Box\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcut_box}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcut_box_a8e8bf81f09a92d91e413becf359b448f}{cut\+Box}} (int x0, int x1, int y0, int y1, int z0, int z1)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcut_box}{cut\+Box}}\+: Desativa o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo, seja ele em x, y, ou z, destruindo os blocos no intervalo determinado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcut_box_ad221aa42f4a7693b697d1492c9c23c29}{$\sim$cut\+Box}} ()
+\item 
+void \mbox{\hyperlink{classcut_box_a3b25743dcbe5ba6700a92bab8f9337c0}{draw}} (\mbox{\hyperlink{class_escultor}{Escultor}} \&e)
+\begin{DoxyCompactList}\small\item\em draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+A classe Cut\+Box é responsável por desativar o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo em x, y ou z. 
+
+Definido na linha 8 do ficheiro cutbox.\+h.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classcut_box_a8e8bf81f09a92d91e413becf359b448f}\label{classcut_box_a8e8bf81f09a92d91e413becf359b448f}} 
+\index{cutBox@{cutBox}!cutBox@{cutBox}}
+\index{cutBox@{cutBox}!cutBox@{cutBox}}
+\doxysubsubsection{\texorpdfstring{cutBox()}{cutBox()}}
+{\footnotesize\ttfamily cut\+Box\+::cut\+Box (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1,  }\item[{int}]{z0,  }\item[{int}]{z1 }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcut_box}{cut\+Box}}\+: Desativa o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo, seja ele em x, y, ou z, destruindo os blocos no intervalo determinado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x0} & parâmetro referente ao início da construção do retângulo em relação ao eixo x. \\
+\hline
+{\em x1} & parâmetro referente ao final da construção do retângulo em relação ao eixo x. \\
+\hline
+{\em y0} & parâmetro referente ao início da construção do retângulo em relação ao eixo y. \\
+\hline
+{\em y1} & parâmetro referente ao final da construção do retângulo em relação ao eixo y. \\
+\hline
+{\em z0} & parâmetro referente ao início da construção do retângulo em relação ao eixo z. \\
+\hline
+{\em z1} & parâmetro referente ao final da construção do retângulo em relação ao eixo z. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 3 do ficheiro cutbox.\+cpp.
+
+\mbox{\Hypertarget{classcut_box_ad221aa42f4a7693b697d1492c9c23c29}\label{classcut_box_ad221aa42f4a7693b697d1492c9c23c29}} 
+\index{cutBox@{cutBox}!````~cutBox@{$\sim$cutBox}}
+\index{````~cutBox@{$\sim$cutBox}!cutBox@{cutBox}}
+\doxysubsubsection{\texorpdfstring{$\sim$cutBox()}{~cutBox()}}
+{\footnotesize\ttfamily cut\+Box\+::$\sim$cut\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definido na linha 24 do ficheiro cutbox.\+h.
+
+
+
+\doxysubsection{Documentação dos métodos}
+\mbox{\Hypertarget{classcut_box_a3b25743dcbe5ba6700a92bab8f9337c0}\label{classcut_box_a3b25743dcbe5ba6700a92bab8f9337c0}} 
+\index{cutBox@{cutBox}!draw@{draw}}
+\index{draw@{draw}!cutBox@{cutBox}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void cut\+Box\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_escultor}{Escultor}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em e} & parâmetro responsável por referenciar o valor recebido pela função draw. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_a3c87d823ac6c404cb71b9a4454cc9be4}{Figura\+Geometrica}}.
+
+
+
+Definido na linha 8 do ficheiro cutbox.\+cpp.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cutbox_8h}{cutbox.\+h}}\item 
+\mbox{\hyperlink{cutbox_8cpp}{cutbox.\+cpp}}\end{DoxyCompactItemize}

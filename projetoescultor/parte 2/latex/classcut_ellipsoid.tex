@@ -1,0 +1,108 @@
+\hypertarget{classcut_ellipsoid}{}\doxysection{Referência à classe cut\+Ellipsoid}
+\label{classcut_ellipsoid}\index{cutEllipsoid@{cutEllipsoid}}
+
+
+A classe Cut\+Ellipsoid é responsável por desativar o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo de x, y ou z.  
+
+
+
+
+{\ttfamily \#include $<$cutellipsoid.\+h$>$}
+
+Diagrama de heranças da classe cut\+Ellipsoid\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcut_ellipsoid}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcut_ellipsoid_ace852f06b6395ceaa5c0382e37e44c8d}{cut\+Ellipsoid}} (int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcut_ellipsoid}{cut\+Ellipsoid}}\+: método responsável por cortar a área de uma figura de um elipse no plano do desenho. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcut_ellipsoid_ae4877ae289158979d34ac8c19caeb7fe}{$\sim$cut\+Ellipsoid}} ()
+\item 
+void \mbox{\hyperlink{classcut_ellipsoid_aa89ec04d680a116e118cf6605d086ef0}{draw}} (\mbox{\hyperlink{class_escultor}{Escultor}} \&e)
+\begin{DoxyCompactList}\small\item\em draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+A classe Cut\+Ellipsoid é responsável por desativar o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo de x, y ou z. 
+
+Definido na linha 8 do ficheiro cutellipsoid.\+h.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classcut_ellipsoid_ace852f06b6395ceaa5c0382e37e44c8d}\label{classcut_ellipsoid_ace852f06b6395ceaa5c0382e37e44c8d}} 
+\index{cutEllipsoid@{cutEllipsoid}!cutEllipsoid@{cutEllipsoid}}
+\index{cutEllipsoid@{cutEllipsoid}!cutEllipsoid@{cutEllipsoid}}
+\doxysubsubsection{\texorpdfstring{cutEllipsoid()}{cutEllipsoid()}}
+{\footnotesize\ttfamily cut\+Ellipsoid\+::cut\+Ellipsoid (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{rx,  }\item[{int}]{ry,  }\item[{int}]{rz }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcut_ellipsoid}{cut\+Ellipsoid}}\+: método responsável por cortar a área de uma figura de um elipse no plano do desenho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em xcenter} & parâmetro referente à coordenada do x do centro. \\
+\hline
+{\em ycenter} & parâmetro referente à coordenada do y do centro. \\
+\hline
+{\em zcenter} & parâmetro referente à coordenada do z do centro. \\
+\hline
+{\em rx} & parâmetro referente à coordenada do eixo x. \\
+\hline
+{\em ry} & parâmetro referente à coordenada do eixo y. \\
+\hline
+{\em rz} & parâmetro referente à coordenada do eixo z. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 4 do ficheiro cutellipsoid.\+cpp.
+
+\mbox{\Hypertarget{classcut_ellipsoid_ae4877ae289158979d34ac8c19caeb7fe}\label{classcut_ellipsoid_ae4877ae289158979d34ac8c19caeb7fe}} 
+\index{cutEllipsoid@{cutEllipsoid}!````~cutEllipsoid@{$\sim$cutEllipsoid}}
+\index{````~cutEllipsoid@{$\sim$cutEllipsoid}!cutEllipsoid@{cutEllipsoid}}
+\doxysubsubsection{\texorpdfstring{$\sim$cutEllipsoid()}{~cutEllipsoid()}}
+{\footnotesize\ttfamily cut\+Ellipsoid\+::$\sim$cut\+Ellipsoid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definido na linha 25 do ficheiro cutellipsoid.\+h.
+
+
+
+\doxysubsection{Documentação dos métodos}
+\mbox{\Hypertarget{classcut_ellipsoid_aa89ec04d680a116e118cf6605d086ef0}\label{classcut_ellipsoid_aa89ec04d680a116e118cf6605d086ef0}} 
+\index{cutEllipsoid@{cutEllipsoid}!draw@{draw}}
+\index{draw@{draw}!cutEllipsoid@{cutEllipsoid}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void cut\+Ellipsoid\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_escultor}{Escultor}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em e} & parâmetro responsável por referenciar o valor recebido pela função draw. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_a3c87d823ac6c404cb71b9a4454cc9be4}{Figura\+Geometrica}}.
+
+
+
+Definido na linha 10 do ficheiro cutellipsoid.\+cpp.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cutellipsoid_8h}{cutellipsoid.\+h}}\item 
+\mbox{\hyperlink{cutellipsoid_8cpp}{cutellipsoid.\+cpp}}\end{DoxyCompactItemize}

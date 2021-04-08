@@ -1,0 +1,104 @@
+\hypertarget{classcut_sphere}{}\doxysection{Referência à classe cut\+Sphere}
+\label{classcut_sphere}\index{cutSphere@{cutSphere}}
+
+
+A classe Cut\+Sphere é responsável por desativar o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo de x, y ou z.  
+
+
+
+
+{\ttfamily \#include $<$cutsphere.\+h$>$}
+
+Diagrama de heranças da classe cut\+Sphere\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcut_sphere}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcut_sphere_a3eaf7643a0e001270890a784c26ac5c0}{cut\+Sphere}} (int xcenter, int ycenter, int zcenter, int radius)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcut_sphere}{cut\+Sphere}} método responsável por cortar uma determinada área de uma figura de uma esfera no plano do desenho. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcut_sphere_acc41c446f3ae38d39b18b7b08e34f236}{$\sim$cut\+Sphere}} ()
+\item 
+void \mbox{\hyperlink{classcut_sphere_a2c1b4c230dc6e76c3d629457c03f04b8}{draw}} (\mbox{\hyperlink{class_escultor}{Escultor}} \&e)
+\begin{DoxyCompactList}\small\item\em draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+A classe Cut\+Sphere é responsável por desativar o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo de x, y ou z. 
+
+Definido na linha 8 do ficheiro cutsphere.\+h.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classcut_sphere_a3eaf7643a0e001270890a784c26ac5c0}\label{classcut_sphere_a3eaf7643a0e001270890a784c26ac5c0}} 
+\index{cutSphere@{cutSphere}!cutSphere@{cutSphere}}
+\index{cutSphere@{cutSphere}!cutSphere@{cutSphere}}
+\doxysubsubsection{\texorpdfstring{cutSphere()}{cutSphere()}}
+{\footnotesize\ttfamily cut\+Sphere\+::cut\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{radius }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcut_sphere}{cut\+Sphere}} método responsável por cortar uma determinada área de uma figura de uma esfera no plano do desenho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em xcenter} & parâmetro referente à coordenada do x do centro. \\
+\hline
+{\em ycenter} & parâmetro referente à coordenada do y do centro. \\
+\hline
+{\em zcenter} & parâmetro referente à coordenada do z do centro. \\
+\hline
+{\em radius} & parâmetro referente ao tamanho do raio da esfera. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 4 do ficheiro cutsphere.\+cpp.
+
+\mbox{\Hypertarget{classcut_sphere_acc41c446f3ae38d39b18b7b08e34f236}\label{classcut_sphere_acc41c446f3ae38d39b18b7b08e34f236}} 
+\index{cutSphere@{cutSphere}!````~cutSphere@{$\sim$cutSphere}}
+\index{````~cutSphere@{$\sim$cutSphere}!cutSphere@{cutSphere}}
+\doxysubsubsection{\texorpdfstring{$\sim$cutSphere()}{~cutSphere()}}
+{\footnotesize\ttfamily cut\+Sphere\+::$\sim$cut\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definido na linha 22 do ficheiro cutsphere.\+h.
+
+
+
+\doxysubsection{Documentação dos métodos}
+\mbox{\Hypertarget{classcut_sphere_a2c1b4c230dc6e76c3d629457c03f04b8}\label{classcut_sphere_a2c1b4c230dc6e76c3d629457c03f04b8}} 
+\index{cutSphere@{cutSphere}!draw@{draw}}
+\index{draw@{draw}!cutSphere@{cutSphere}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void cut\+Sphere\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_escultor}{Escultor}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em e} & parâmetro responsável por referenciar o valor recebido pela função draw. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_a3c87d823ac6c404cb71b9a4454cc9be4}{Figura\+Geometrica}}.
+
+
+
+Definido na linha 9 do ficheiro cutsphere.\+cpp.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cutsphere_8h}{cutsphere.\+h}}\item 
+\mbox{\hyperlink{cutsphere_8cpp}{cutsphere.\+cpp}}\end{DoxyCompactItemize}

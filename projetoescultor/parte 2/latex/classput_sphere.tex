@@ -1,0 +1,112 @@
+\hypertarget{classput_sphere}{}\doxysection{Referência à classe put\+Sphere}
+\label{classput_sphere}\index{putSphere@{putSphere}}
+
+
+A classe Put\+Sphere é responsável gerar Voxels que representam uma esfera, ela realiza o preenchimento do espaço com base nos parâmetros de entrada fornecidos pelo usuário.  
+
+
+
+
+{\ttfamily \#include $<$putsphere.\+h$>$}
+
+Diagrama de heranças da classe put\+Sphere\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classput_sphere}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classput_sphere_a186ac51400d1d79a1e6060e56a90e32a}{put\+Sphere}} (int xcenter, int ycenter, int zcenter, int radius, float \mbox{\hyperlink{class_figura_geometrica_a0a4f57efb1a6c525c8aeee34c92e7eab}{r}}, float \mbox{\hyperlink{class_figura_geometrica_a51930549bcb90d016b824f10f95df355}{g}}, float \mbox{\hyperlink{class_figura_geometrica_a25e5d6c21410103c25ec55c0117dac0d}{b}}, float \mbox{\hyperlink{class_figura_geometrica_ae7c8a027fcec3c357265b90458a4d165}{a}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classput_sphere}{put\+Sphere}}\+: método responsável por gerar a figura de uma esfera no plano de desenho. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classput_sphere_aeca8caff4f0c76f50a375159a12300f5}{$\sim$put\+Sphere}} ()
+\item 
+void \mbox{\hyperlink{classput_sphere_a07301159e8f53435fef97cb2e6f43fff}{draw}} (\mbox{\hyperlink{class_escultor}{Escultor}} \&e)
+\begin{DoxyCompactList}\small\item\em draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+A classe Put\+Sphere é responsável gerar Voxels que representam uma esfera, ela realiza o preenchimento do espaço com base nos parâmetros de entrada fornecidos pelo usuário. 
+
+Definido na linha 9 do ficheiro putsphere.\+h.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classput_sphere_a186ac51400d1d79a1e6060e56a90e32a}\label{classput_sphere_a186ac51400d1d79a1e6060e56a90e32a}} 
+\index{putSphere@{putSphere}!putSphere@{putSphere}}
+\index{putSphere@{putSphere}!putSphere@{putSphere}}
+\doxysubsubsection{\texorpdfstring{putSphere()}{putSphere()}}
+{\footnotesize\ttfamily put\+Sphere\+::put\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{radius,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classput_sphere}{put\+Sphere}}\+: método responsável por gerar a figura de uma esfera no plano de desenho. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em xcenter} & parâmetro que se refere ao x do centro da esfera. \\
+\hline
+{\em ycenter} & parâmetro que se refere ao x do centro da esfera. \\
+\hline
+{\em zcenter} & parâmetro que se refere ao x do centro da esfera. \\
+\hline
+{\em radius} & parâmetro que se refere ao tamanho do raio da esfera. \\
+\hline
+{\em r} & Cor vermelha. \\
+\hline
+{\em g} & Cor verde. \\
+\hline
+{\em b} & Cor azul. \\
+\hline
+{\em a} & Transparência. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 4 do ficheiro putsphere.\+cpp.
+
+\mbox{\Hypertarget{classput_sphere_aeca8caff4f0c76f50a375159a12300f5}\label{classput_sphere_aeca8caff4f0c76f50a375159a12300f5}} 
+\index{putSphere@{putSphere}!````~putSphere@{$\sim$putSphere}}
+\index{````~putSphere@{$\sim$putSphere}!putSphere@{putSphere}}
+\doxysubsubsection{\texorpdfstring{$\sim$putSphere()}{~putSphere()}}
+{\footnotesize\ttfamily put\+Sphere\+::$\sim$put\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definido na linha 27 do ficheiro putsphere.\+h.
+
+
+
+\doxysubsection{Documentação dos métodos}
+\mbox{\Hypertarget{classput_sphere_a07301159e8f53435fef97cb2e6f43fff}\label{classput_sphere_a07301159e8f53435fef97cb2e6f43fff}} 
+\index{putSphere@{putSphere}!draw@{draw}}
+\index{draw@{draw}!putSphere@{putSphere}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void put\+Sphere\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_escultor}{Escultor}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em e} & parâmetro responsável por referenciar o valor recebido pela função draw. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_a3c87d823ac6c404cb71b9a4454cc9be4}{Figura\+Geometrica}}.
+
+
+
+Definido na linha 9 do ficheiro putsphere.\+cpp.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{putsphere_8h}{putsphere.\+h}}\item 
+\mbox{\hyperlink{putsphere_8cpp}{putsphere.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+\hypertarget{classcut_voxel}{}\doxysection{Referência à classe cut\+Voxel}
+\label{classcut_voxel}\index{cutVoxel@{cutVoxel}}
+
+
+A classe Cut\+Voxel é responsável por desativar o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo de x, y ou z.  
+
+
+
+
+{\ttfamily \#include $<$cutvoxel.\+h$>$}
+
+Diagrama de heranças da classe cut\+Voxel\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcut_voxel}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcut_voxel_a43e26aed4629e0a53d76fc89a849febd}{cut\+Voxel}} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcut_voxel}{cut\+Voxel}}\+: Desabilita o \mbox{\hyperlink{struct_voxel}{Voxel}} que estava operando na coloração dos blocos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcut_voxel_a7bcbee6a6842c7b359980f5d6fe29921}{$\sim$cut\+Voxel}} ()
+\item 
+void \mbox{\hyperlink{classcut_voxel_abd2b190395010e8b1d27b480bf12f583}{draw}} (\mbox{\hyperlink{class_escultor}{Escultor}} \&e)
+\begin{DoxyCompactList}\small\item\em draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+A classe Cut\+Voxel é responsável por desativar o \mbox{\hyperlink{struct_voxel}{Voxel}} em um determinado intervalo de x, y ou z. 
+
+Definido na linha 8 do ficheiro cutvoxel.\+h.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classcut_voxel_a43e26aed4629e0a53d76fc89a849febd}\label{classcut_voxel_a43e26aed4629e0a53d76fc89a849febd}} 
+\index{cutVoxel@{cutVoxel}!cutVoxel@{cutVoxel}}
+\index{cutVoxel@{cutVoxel}!cutVoxel@{cutVoxel}}
+\doxysubsubsection{\texorpdfstring{cutVoxel()}{cutVoxel()}}
+{\footnotesize\ttfamily cut\+Voxel\+::cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classcut_voxel}{cut\+Voxel}}\+: Desabilita o \mbox{\hyperlink{struct_voxel}{Voxel}} que estava operando na coloração dos blocos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x} & coordenada em relação ao eixo x. \\
+\hline
+{\em y} & coordenada em relação ao eixo y. \\
+\hline
+{\em z} & coordenada em relação ao eixo z. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha 3 do ficheiro cutvoxel.\+cpp.
+
+\mbox{\Hypertarget{classcut_voxel_a7bcbee6a6842c7b359980f5d6fe29921}\label{classcut_voxel_a7bcbee6a6842c7b359980f5d6fe29921}} 
+\index{cutVoxel@{cutVoxel}!````~cutVoxel@{$\sim$cutVoxel}}
+\index{````~cutVoxel@{$\sim$cutVoxel}!cutVoxel@{cutVoxel}}
+\doxysubsubsection{\texorpdfstring{$\sim$cutVoxel()}{~cutVoxel()}}
+{\footnotesize\ttfamily cut\+Voxel\+::$\sim$cut\+Voxel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definido na linha 22 do ficheiro cutvoxel.\+h.
+
+
+
+\doxysubsection{Documentação dos métodos}
+\mbox{\Hypertarget{classcut_voxel_abd2b190395010e8b1d27b480bf12f583}\label{classcut_voxel_abd2b190395010e8b1d27b480bf12f583}} 
+\index{cutVoxel@{cutVoxel}!draw@{draw}}
+\index{draw@{draw}!cutVoxel@{cutVoxel}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void cut\+Voxel\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_escultor}{Escultor}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw\+: função responsável por instruir o objeto a se desenhar em um objeto do tipo \mbox{\hyperlink{class_escultor}{Escultor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em e} & parâmetro responsável por referenciar o valor recebido pela função draw. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{class_figura_geometrica_a3c87d823ac6c404cb71b9a4454cc9be4}{Figura\+Geometrica}}.
+
+
+
+Definido na linha 9 do ficheiro cutvoxel.\+cpp.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cutvoxel_8h}{cutvoxel.\+h}}\item 
+\mbox{\hyperlink{cutvoxel_8cpp}{cutvoxel.\+cpp}}\end{DoxyCompactItemize}
