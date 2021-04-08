@@ -2,8 +2,7 @@
 #define ESCULTOR_H
 
 /**
- * @brief The Voxel struct
- * A estrutura Voxel é responsável por gerar a matriz 3D de acordo com seus parâmetros
+ * @brief A estrutura Voxel é responsável por gerar a matriz 3D de acordo com seus parâmetros.
  * @param r: refere-se à cor vermelha existente no sistema RGB, sua variação de tom é feita entre 0 e 255.
  * @param g: refere-se à cor verde existente no sistema RGB, sua variação de tom é feita entre 0 e 255.
  * @param b: refere-se à cor azul existente no sistema RGB, sua variação de tom é feita entre 0 e 255.
