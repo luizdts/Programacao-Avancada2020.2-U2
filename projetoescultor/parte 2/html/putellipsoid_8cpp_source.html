@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto Escultor - Parte 2: Código-Fonte de putellipsoid.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto Escultor - Parte 2
+   </div>
+   <div id="projectbrief">Documentação sobre a segunda parte do projeto Escultor desenvolvido na disciplina DCA1202 - Programação Avançada na UFRN no semestre 2020.2</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">putellipsoid.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="putellipsoid_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="putellipsoid_8h.html">putellipsoid.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;cmath&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classput_ellipsoid.html#aefad71d076c5b6fc302a0ca7554a1be4">    4</a></span>&#160;<a class="code" href="classput_ellipsoid.html#aefad71d076c5b6fc302a0ca7554a1be4">putEllipsoid::putEllipsoid</a>(<span class="keywordtype">int</span> xcenter, <span class="keywordtype">int</span> ycenter, <span class="keywordtype">int</span> zcenter, <span class="keywordtype">int</span> rx, <span class="keywordtype">int</span> ry, <span class="keywordtype">int</span> rz, <span class="keywordtype">float</span> r, <span class="keywordtype">float</span> g, <span class="keywordtype">float</span> b, <span class="keywordtype">float</span> a)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    this-&gt;xcenter=xcenter; this-&gt;ycenter=ycenter; this-&gt;zcenter=zcenter; this-&gt;rx=rx; this-&gt;ry=ry; this-&gt;rz=rz;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    this-&gt;r=<a class="code" href="class_figura_geometrica.html#a0a4f57efb1a6c525c8aeee34c92e7eab">r</a>; this-&gt;g=<a class="code" href="class_figura_geometrica.html#a51930549bcb90d016b824f10f95df355">g</a>; this-&gt;b=<a class="code" href="class_figura_geometrica.html#a25e5d6c21410103c25ec55c0117dac0d">b</a>; this-&gt;a=<a class="code" href="class_figura_geometrica.html#ae7c8a027fcec3c357265b90458a4d165">a</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classput_ellipsoid.html#a972621e0eba819a79f1c6741ebc640f3">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classput_ellipsoid.html#a972621e0eba819a79f1c6741ebc640f3">putEllipsoid::draw</a>(<a class="code" href="class_escultor.html">Escultor</a> &amp;e){</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    e.<a class="code" href="class_escultor.html#a0ed0cf0ce64c797f9d41dbc0f0d2a9df">setColor</a>(<a class="code" href="class_figura_geometrica.html#a0a4f57efb1a6c525c8aeee34c92e7eab">r</a>,<a class="code" href="class_figura_geometrica.html#a51930549bcb90d016b824f10f95df355">g</a>,<a class="code" href="class_figura_geometrica.html#a25e5d6c21410103c25ec55c0117dac0d">b</a>,<a class="code" href="class_figura_geometrica.html#ae7c8a027fcec3c357265b90458a4d165">a</a>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=xcenter-rx;i&lt;=xcenter+rx;i++){</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=ycenter-ry;j&lt;=ycenter+ry;j++){</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> k=zcenter-rz;k&lt;=zcenter+rz;k++){</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                    <span class="keywordflow">if</span>((pow(i-xcenter,2)/pow(rx,2)) + (pow(j-ycenter,2)/pow(ry,2)) + (pow(k-zcenter,2)/pow(rz,2)) &lt;= 1){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                       e.<a class="code" href="class_escultor.html#a87de20221e4def641970fcfedacf95d1">putVoxel</a>(i,j,k);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="ttc" id="aclass_escultor_html"><div class="ttname"><a href="class_escultor.html">Escultor</a></div><div class="ttdoc">The Escultor class Classe responsável por gerar o Escultor da figura 3D, dentro dessa classe encontra...</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00028">escultor.h:28</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a0ed0cf0ce64c797f9d41dbc0f0d2a9df"><div class="ttname"><a href="class_escultor.html#a0ed0cf0ce64c797f9d41dbc0f0d2a9df">Escultor::setColor</a></div><div class="ttdeci">void setColor(float r, float g, float b, float alpha)</div><div class="ttdoc">setColor: Função responsável por dar cor no padrão RGB às peças criadas</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00044">escultor.cpp:44</a></div></div>
+<div class="ttc" id="aclass_escultor_html_a87de20221e4def641970fcfedacf95d1"><div class="ttname"><a href="class_escultor.html#a87de20221e4def641970fcfedacf95d1">Escultor::putVoxel</a></div><div class="ttdeci">void putVoxel(int x, int y, int z)</div><div class="ttdoc">putVoxel: Habilita o Voxel para operar na coloração dos blocos desenhados.</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8cpp_source.html#l00054">escultor.cpp:54</a></div></div>
+<div class="ttc" id="aclass_figura_geometrica_html_a0a4f57efb1a6c525c8aeee34c92e7eab"><div class="ttname"><a href="class_figura_geometrica.html#a0a4f57efb1a6c525c8aeee34c92e7eab">FiguraGeometrica::r</a></div><div class="ttdeci">float r</div><div class="ttdoc">r, g, b, a: Valores iniciais para definir a cor do objeto, seja ele vermelho, verde,...</div><div class="ttdef"><b>Definition:</b> <a href="figurageometrica_8h_source.html#l00015">figurageometrica.h:15</a></div></div>
+<div class="ttc" id="aclass_figura_geometrica_html_a25e5d6c21410103c25ec55c0117dac0d"><div class="ttname"><a href="class_figura_geometrica.html#a25e5d6c21410103c25ec55c0117dac0d">FiguraGeometrica::b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="figurageometrica_8h_source.html#l00015">figurageometrica.h:15</a></div></div>
+<div class="ttc" id="aclass_figura_geometrica_html_a51930549bcb90d016b824f10f95df355"><div class="ttname"><a href="class_figura_geometrica.html#a51930549bcb90d016b824f10f95df355">FiguraGeometrica::g</a></div><div class="ttdeci">float g</div><div class="ttdef"><b>Definition:</b> <a href="figurageometrica_8h_source.html#l00015">figurageometrica.h:15</a></div></div>
+<div class="ttc" id="aclass_figura_geometrica_html_ae7c8a027fcec3c357265b90458a4d165"><div class="ttname"><a href="class_figura_geometrica.html#ae7c8a027fcec3c357265b90458a4d165">FiguraGeometrica::a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="figurageometrica_8h_source.html#l00015">figurageometrica.h:15</a></div></div>
+<div class="ttc" id="aclassput_ellipsoid_html_a972621e0eba819a79f1c6741ebc640f3"><div class="ttname"><a href="classput_ellipsoid.html#a972621e0eba819a79f1c6741ebc640f3">putEllipsoid::draw</a></div><div class="ttdeci">void draw(Escultor &amp;e)</div><div class="ttdoc">draw: função responsável por instruir o objeto a se desenhar em um objeto do tipo Escultor.</div><div class="ttdef"><b>Definition:</b> <a href="putellipsoid_8cpp_source.html#l00010">putellipsoid.cpp:10</a></div></div>
+<div class="ttc" id="aclassput_ellipsoid_html_aefad71d076c5b6fc302a0ca7554a1be4"><div class="ttname"><a href="classput_ellipsoid.html#aefad71d076c5b6fc302a0ca7554a1be4">putEllipsoid::putEllipsoid</a></div><div class="ttdeci">putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz, float r, float g, float b, float a)</div><div class="ttdoc">putEllipsoid: método responsável por gerar a figura de uma elipse no plano do desenho.</div><div class="ttdef"><b>Definition:</b> <a href="putellipsoid_8cpp_source.html#l00004">putellipsoid.cpp:4</a></div></div>
+<div class="ttc" id="aputellipsoid_8h_html"><div class="ttname"><a href="putellipsoid_8h.html">putellipsoid.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

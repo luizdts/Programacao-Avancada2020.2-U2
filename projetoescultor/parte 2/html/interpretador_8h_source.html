@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto Escultor - Parte 2: Código-Fonte de interpretador.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto Escultor - Parte 2
+   </div>
+   <div id="projectbrief">Documentação sobre a segunda parte do projeto Escultor desenvolvido na disciplina DCA1202 - Programação Avançada na UFRN no semestre 2020.2</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">interpretador.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="interpretador_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INTERPRETADOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INTERPRETADOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="figurageometrica_8h.html">figurageometrica.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="escultor_8h.html">escultor.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_interpretador.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_interpretador.html">Interpretador</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> dx, dy, dz;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">float</span> r, g, b, a;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_interpretador.html#a12d844a7ab8d634e96b57971c9aedd9e">Interpretador</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::vector&lt;FiguraGeometrica*&gt; <a class="code" href="class_interpretador.html#af31b0a5ca1f68666a8244b5d61b2946b">parse</a>(std::string filename);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_interpretador.html#a8341b27aa03340bf905e554b46a84657">getX</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_interpretador.html#a1e48d783f61727efcf9a6462bb44488b">getY</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_interpretador.html#a10d90a857863d836320afbb3adec8745">getZ</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// INTERPRETADOR_H</span></div>
+<div class="ttc" id="aclass_interpretador_html"><div class="ttname"><a href="class_interpretador.html">Interpretador</a></div><div class="ttdoc">A classe Interpretador é responsável por fazer a leitura do arquivo &quot;figura.txt&quot; e gerar o arquivo ....</div><div class="ttdef"><b>Definition:</b> <a href="interpretador_8h_source.html#l00010">interpretador.h:11</a></div></div>
+<div class="ttc" id="aclass_interpretador_html_a10d90a857863d836320afbb3adec8745"><div class="ttname"><a href="class_interpretador.html#a10d90a857863d836320afbb3adec8745">Interpretador::getZ</a></div><div class="ttdeci">int getZ()</div><div class="ttdoc">getZ: Captura a dimensão z da escultura.</div><div class="ttdef"><b>Definition:</b> <a href="interpretador_8cpp_source.html#l00083">interpretador.cpp:83</a></div></div>
+<div class="ttc" id="aclass_interpretador_html_a12d844a7ab8d634e96b57971c9aedd9e"><div class="ttname"><a href="class_interpretador.html#a12d844a7ab8d634e96b57971c9aedd9e">Interpretador::Interpretador</a></div><div class="ttdeci">Interpretador()</div><div class="ttdef"><b>Definition:</b> <a href="interpretador_8cpp_source.html#l00014">interpretador.cpp:14</a></div></div>
+<div class="ttc" id="aclass_interpretador_html_a1e48d783f61727efcf9a6462bb44488b"><div class="ttname"><a href="class_interpretador.html#a1e48d783f61727efcf9a6462bb44488b">Interpretador::getY</a></div><div class="ttdeci">int getY()</div><div class="ttdoc">getY: Captura a dimensão y da escultura.</div><div class="ttdef"><b>Definition:</b> <a href="interpretador_8cpp_source.html#l00079">interpretador.cpp:79</a></div></div>
+<div class="ttc" id="aclass_interpretador_html_a8341b27aa03340bf905e554b46a84657"><div class="ttname"><a href="class_interpretador.html#a8341b27aa03340bf905e554b46a84657">Interpretador::getX</a></div><div class="ttdeci">int getX()</div><div class="ttdoc">getX: Captura a dimensão x da escultura.</div><div class="ttdef"><b>Definition:</b> <a href="interpretador_8cpp_source.html#l00074">interpretador.cpp:74</a></div></div>
+<div class="ttc" id="aclass_interpretador_html_af31b0a5ca1f68666a8244b5d61b2946b"><div class="ttname"><a href="class_interpretador.html#af31b0a5ca1f68666a8244b5d61b2946b">Interpretador::parse</a></div><div class="ttdeci">std::vector&lt; FiguraGeometrica * &gt; parse(std::string filename)</div><div class="ttdef"><b>Definition:</b> <a href="interpretador_8cpp_source.html#l00018">interpretador.cpp:18</a></div></div>
+<div class="ttc" id="aescultor_8h_html"><div class="ttname"><a href="escultor_8h.html">escultor.h</a></div></div>
+<div class="ttc" id="afigurageometrica_8h_html"><div class="ttname"><a href="figurageometrica_8h.html">figurageometrica.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
