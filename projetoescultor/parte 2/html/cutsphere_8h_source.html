@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto Escultor - Parte 2: Código-Fonte de cutsphere.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto Escultor - Parte 2
+   </div>
+   <div id="projectbrief">Documentação sobre a segunda parte do projeto Escultor desenvolvido na disciplina DCA1202 - Programação Avançada na UFRN no semestre 2020.2</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">cutsphere.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cutsphere_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CUTSPHERE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CUTSPHERE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="figurageometrica_8h.html">figurageometrica.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="escultor_8h.html">escultor.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classcut_sphere.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcut_sphere.html">cutSphere</a> : <span class="keyword">public</span> <a class="code" href="class_figura_geometrica.html">FiguraGeometrica</a>{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> xcenter, ycenter, zcenter, radius;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classcut_sphere.html#a3eaf7643a0e001270890a784c26ac5c0">cutSphere</a>(<span class="keywordtype">int</span> xcenter, <span class="keywordtype">int</span> ycenter, <span class="keywordtype">int</span> zcenter, <span class="keywordtype">int</span> radius);</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classcut_sphere.html#acc41c446f3ae38d39b18b7b08e34f236">   22</a></span>&#160;    <a class="code" href="classcut_sphere.html#acc41c446f3ae38d39b18b7b08e34f236">~cutSphere</a>(){};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcut_sphere.html#a2c1b4c230dc6e76c3d629457c03f04b8">draw</a>(<a class="code" href="class_escultor.html">Escultor</a> &amp;e);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// CUTSPHERE_H</span></div>
+<div class="ttc" id="aclass_escultor_html"><div class="ttname"><a href="class_escultor.html">Escultor</a></div><div class="ttdoc">The Escultor class Classe responsável por gerar o Escultor da figura 3D, dentro dessa classe encontra...</div><div class="ttdef"><b>Definition:</b> <a href="escultor_8h_source.html#l00028">escultor.h:28</a></div></div>
+<div class="ttc" id="aclass_figura_geometrica_html"><div class="ttname"><a href="class_figura_geometrica.html">FiguraGeometrica</a></div><div class="ttdoc">Classe FiguraGeometrica: Classe abstrata, ainda não foi definida completamente pelo sistema....</div><div class="ttdef"><b>Definition:</b> <a href="figurageometrica_8h_source.html#l00008">figurageometrica.h:9</a></div></div>
+<div class="ttc" id="aclasscut_sphere_html"><div class="ttname"><a href="classcut_sphere.html">cutSphere</a></div><div class="ttdoc">A classe CutSphere é responsável por desativar o Voxel em um determinado intervalo de x,...</div><div class="ttdef"><b>Definition:</b> <a href="cutsphere_8h_source.html#l00008">cutsphere.h:8</a></div></div>
+<div class="ttc" id="aclasscut_sphere_html_a2c1b4c230dc6e76c3d629457c03f04b8"><div class="ttname"><a href="classcut_sphere.html#a2c1b4c230dc6e76c3d629457c03f04b8">cutSphere::draw</a></div><div class="ttdeci">void draw(Escultor &amp;e)</div><div class="ttdoc">draw: função responsável por instruir o objeto a se desenhar em um objeto do tipo Escultor.</div><div class="ttdef"><b>Definition:</b> <a href="cutsphere_8cpp_source.html#l00009">cutsphere.cpp:9</a></div></div>
+<div class="ttc" id="aclasscut_sphere_html_a3eaf7643a0e001270890a784c26ac5c0"><div class="ttname"><a href="classcut_sphere.html#a3eaf7643a0e001270890a784c26ac5c0">cutSphere::cutSphere</a></div><div class="ttdeci">cutSphere(int xcenter, int ycenter, int zcenter, int radius)</div><div class="ttdoc">cutSphere método responsável por cortar uma determinada área de uma figura de uma esfera no plano do ...</div><div class="ttdef"><b>Definition:</b> <a href="cutsphere_8cpp_source.html#l00004">cutsphere.cpp:4</a></div></div>
+<div class="ttc" id="aclasscut_sphere_html_acc41c446f3ae38d39b18b7b08e34f236"><div class="ttname"><a href="classcut_sphere.html#acc41c446f3ae38d39b18b7b08e34f236">cutSphere::~cutSphere</a></div><div class="ttdeci">~cutSphere()</div><div class="ttdef"><b>Definition:</b> <a href="cutsphere_8h_source.html#l00022">cutsphere.h:22</a></div></div>
+<div class="ttc" id="aescultor_8h_html"><div class="ttname"><a href="escultor_8h.html">escultor.h</a></div></div>
+<div class="ttc" id="afigurageometrica_8h_html"><div class="ttname"><a href="figurageometrica_8h.html">figurageometrica.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
